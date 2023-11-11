@@ -1,1 +1,35 @@
 # GL02_CHEVAL_DE_TROYES
+# Générateur d'Examens CLI pour le Ministère de l'Éducation nationale de la République de Sealand
+
+## Présentation
+
+Bienvenue dans le projet de développement d'un générateur d'examens en ligne de commande, conçu pour moderniser les procédures de création et de gestion des examens scolaires du Ministère de l'Éducation nationale de la République de Sealand. Ce projet émerge de la volonté de numériser la pédagogie et l'apprentissage, avec pour objectif ultime l'amélioration de la qualité et de l'efficacité des évaluations pédagogiques au sein du système éducatif sealandais.
+
+## Objectifs du Projet
+
+1. **Création Facilitée d'Examens en Ligne :** L'outil en ligne de commande permet aux enseignants de créer facilement des examens et des questionnaires au format GIFT, simplifiant ainsi le processus de préparation des évaluations.
+
+2. **Sélection dans une Banque de Données Certifiée :** Les enseignants peuvent choisir des questions à partir d'une banque de données certifiée, garantissant la qualité des questions incluses dans les examens.
+
+3. **Visualisation des Questions :** Avant de finaliser l'examen, les enseignants ont la possibilité de visualiser les questions choisies pour s'assurer de leur pertinence.
+
+4. **Simulation de Test :** L'outil propose une simulation de test pour évaluer la composition du questionnaire, garantissant ainsi que les performances et les connaissances attendues par l'enseignant sont bien représentées.
+
+5. **Génération de Fichier Vcard :** Le logiciel peut générer un fichier d'identification et de contact au format Vcard pour chaque professeur, simplifiant ainsi la gestion des données.
+
+## Utilisation
+
+Pour utiliser l'outil en ligne de commande, suivez les étapes suivantes :
+
+1. Clonez ce dépôt sur votre machine locale.
+2. Ouvrez une console et accédez au répertoire du projet.
+3. Exécutez l'application en utilisant la commande `node app.js` (ou la commande spécifique à votre configuration).
+4. Suivez les instructions à l'écran pour créer et gérer des examens.
+
+## Auteurs
+
+* Florian Chaffard
+* Clément Guinet
+* Fantin Schmitt
+* Rémy Kinzelin
+
