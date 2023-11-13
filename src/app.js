@@ -1,4 +1,29 @@
-const fs = require('fs');
+const fs= require('fs');
+const readline = require("readline");
+
+
+let app = ()=>{
+    console.log('Welcome to the app');
+    //mettre une liste de fonctionnaliter (professeur ou eleve)
+    console.log('1. Professeur');
+    console.log('2. Eleve');
+
+    //demande à l'utilisateur de choisir une option readline (1 ou 2)
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    }
+    );
+    rl.question("Choisissez une option: ", function(option) {
+        if(option == 1){
+            console.log('Professeur');
+        }
+        else if(option == 2) {
+            console.log('Eleve');
+
+        }
+    });
+}
 
 /**
  * Méthode qui permet de parse un fichier gift en json
@@ -27,6 +52,8 @@ const parseGiftToJson = (giftFile)=>{
 }
 
 
-console.log(parseGiftToJson('./files/U4-p42_43-Listening.gift'));
+app();
+
+
 
 
