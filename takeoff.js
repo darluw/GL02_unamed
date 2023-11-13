@@ -68,6 +68,7 @@ var takeOff = function(){
 	// Décollage
 	if(counter === 0){
 		console.log("0.. Fire \nTaaaaakkke Oooooofffff".green);
+		console.log("Blue level checked".blue);
 	}
 }
 
