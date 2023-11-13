@@ -27,6 +27,6 @@ const parseGiftToJson = (giftFile)=>{
 }
 
 
-console.log(parseGiftToJson(''));
+console.log(parseGiftToJson('./files/U4-p42_43-Listening.gift'));
 
 
