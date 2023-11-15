@@ -3,7 +3,9 @@ var fs = require('fs');
 var colors = require('colors');
 var path = require('path');
 
+// Créer une vCard
 function createVCard() {
+    // Définir la vCard
     let myvCard = {
         firstName: "",
         lastName: "",
@@ -11,7 +13,7 @@ function createVCard() {
         cellPhone: "",
         title: "",
     };
-
+    //Définir la fonction qui crée la vCard
     function vCard() {
         start = "BEGIN:VCARD\nVERSION:4.0\n";
         end = "END:VCARD";
@@ -24,7 +26,7 @@ function createVCard() {
     }
 
 
-    //set properties
+    // Demander les informations
     myvCard.firstName = prompt('Prénom : ');
     while (!/^[A-Za-zÀ-ÖØ-öø-ÿ-]+$/.test(myvCard.firstName)) {
         myvCard.firstName = prompt('Veuillez entrer un prénom valide. Seules les lettres sont acceptées. '.red);
@@ -52,10 +54,11 @@ function createVCard() {
     console.log('Email : '.green + myvCard.email.blue);
     console.log('Numéro de téléphone : '.green + myvCard.cellPhone.blue);
     console.log('Matière enseignée : '.green + myvCard.title.blue);
-
     let correct = prompt('Les informations sont-elles correctes ? (O/N) : ');
     
+    // Demander si les informations sont correctes
     if (correct == 'N' || correct == 'n') {
+        // Informations ne vont pas, on réinitialise la vCard, et on recommence la fonction
         myvCard = {
             firstName: "",
             lastName: "",
@@ -66,6 +69,7 @@ function createVCard() {
         createVCard();
     }
     else if (correct == 'O' || correct == 'o') {
+        // Informations sont corrects, on crée la vCard
         // Définir le chemin du dossier et du fichier
         var dirPath = path.join(__dirname, 'Contact');
         var filePath = path.join(dirPath, myvCard.lastName + '.vcf');
@@ -86,4 +90,4 @@ function createVCard() {
 
 }
 
-createVCard();
+//createVCard();
