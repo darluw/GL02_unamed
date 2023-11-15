@@ -46,18 +46,44 @@ function createVCard() {
         myvCard.title = "Professeur : " + prompt('Veuillez entrer un rôle valide. Seules les lettres sont acceptées. '.red);
     }
 
-    // Définir le chemin du dossier et du fichier
-    var dirPath = path.join(__dirname, 'Contact');
-    var filePath = path.join(dirPath, myvCard.lastName + '.vcf');
+    //Vérifier que les informations sont correctes
+    console.log('Prénom : '.green + myvCard.firstName.blue);
+    console.log('Nom : '.green + myvCard.lastName.blue);
+    console.log('Email : '.green + myvCard.email.blue);
+    console.log('Numéro de téléphone : '.green + myvCard.cellPhone.blue);
+    console.log('Matière enseignée : '.green + myvCard.title.blue);
 
-    // Créer le dossier s'il n'existe pas
-    if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath);
+    let correct = prompt('Les informations sont-elles correctes ? (O/N) : ');
+    
+    if (correct == 'N' || correct == 'n') {
+        myvCard = {
+            firstName: "",
+            lastName: "",
+            email: "",
+            cellPhone: "",
+            title: "",
+        };
+        createVCard();
+    }
+    else if (correct == 'O' || correct == 'o') {
+        // Définir le chemin du dossier et du fichier
+        var dirPath = path.join(__dirname, 'Contact');
+        var filePath = path.join(dirPath, myvCard.lastName + '.vcf');
+
+        // Créer le dossier s'il n'existe pas
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath);
+        }
+
+        // Écrire la vCard dans un fichier
+        fs.writeFileSync(filePath, vCard());
+        console.log('Le fichier à bien été créer dans le dossier contact.'.green);
+    }
+    else {
+        console.log('Veuillez entrer O ou N : '.red);
     }
 
-    // Écrire la vCard dans un fichier
-    fs.writeFileSync(filePath, vCard());
-    console.log('Le fichier à bien été créer dans le dossier contact.'.green);
+
 }
 
 createVCard();
