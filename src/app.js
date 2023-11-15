@@ -1,32 +1,49 @@
+const parse= require("gift-pegjs");
 const fs = require('fs');
+const login = require("./login.js");
+const prompt = require("prompt-sync")();
 
-/**
- * Méthode qui permet de parse un fichier gift en json
- */
-const parseGiftToJson = (giftFile)=>{
 
-    const file = fs.readFileSync(giftFile, 'utf8');
-    const lines = file.split('\n');
-    const json = {};
+/**let filePath = "../files/U3-p32-Gra-Present_perfect_simple_vs_continuous.gift";
 
-    for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        if (line.startsWith('::')) {
-            const key = line.substring(2);
-            json[key] = '';
-            let j = i + 1;
-            while (j < lines.length && !lines[j].startsWith('::')) {
-                json[key] += lines[j];
-                j++;
-            }
-            i = j - 1;
-        }
+
+
+// Lecture asynchrone (non bloquante)
+fs.readFile(filePath, 'utf8', (err, fileContent) => {
+    if (err) {
+        console.error('Erreur lors de la lecture du fichier :', err);
+        return;
     }
+    console.log(fileContent);
 
-    return json;
+    // Maintenant, vous pouvez utiliser fileContent comme entrée pour votre analyseur GIFT
+    const quiz = parse.parse(fileContent);
+    console.log(quiz);
+});*/
+
+console.log("Bienvenue dans le quiz");
+console.log("1. Login");
+console.log("2. Register");
+console.log("3. Exit");
+let choice = prompt("Votre choix : ");
+switch (choice){
+    case "1":
+        login.login();
+        break;
+    case "2":
+        login.register();
+        break;
+    case "3":
+        console.log("Bye bye");
+        break;
+    default:
+        console.log("Wrong choice");
+        break;
 }
 
 
-console.log(parseGiftToJson('./files/U4-p42_43-Listening.gift'));
+
+
+
 
 
