@@ -17,8 +17,8 @@ let login = ()=>{
         console.log("Welcome " + user.username);
     }else{
         console.log("Wrong username or password");
-        prompt("Voulez-vous réessayer ou vous inscrire ? (1) Réessayer | (2) s'inscrire | (3) Exit  :")
-        switch (prompt){
+        let choice = prompt("Voulez-vous réessayer ou vous inscrire ? (1) Réessayer | (2) s'inscrire | (3) Exit  :")
+        switch (choice){
             case "1":
                 login();
                 break;
@@ -36,6 +36,7 @@ let login = ()=>{
 }
 
 let register = ()=>{
+    console.log("Register : ");
     let username = prompt("Username : ");
     let password = prompt("Password : ");
     while(password.length < 8){
