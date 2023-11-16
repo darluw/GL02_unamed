@@ -6,7 +6,6 @@ const prompt = require("prompt-sync")();
 
 let app = ()=>{
     main();
-
 }
 
 let main = ()=>{
