@@ -19,3 +19,5 @@ package-lock.json
 !.vscode/extensions.json
 
 node_modules/
+/package.json
+/POI.js
