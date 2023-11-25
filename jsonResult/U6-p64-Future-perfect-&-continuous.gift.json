@@ -1,0 +1,1903 @@
+[
+  {
+    "location": {
+      "start": 2,
+      "end": 2,
+      "text": "::U6 p64 GR3 Future-perfect-&-continuous::"
+    },
+    "result": [
+      null,
+      [
+        {
+          "message": "Expected \"{\" or Question stem but end of input found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "Question stem"
+            },
+            {
+              "type": "literal",
+              "text": "{",
+              "ignoreCase": false
+            }
+          ],
+          "found": null,
+          "location": {
+            "start": {
+              "offset": 52,
+              "line": 2,
+              "column": 43
+            },
+            "end": {
+              "offset": 52,
+              "line": 2,
+              "column": 43
+            }
+          },
+          "name": "SyntaxError"
+        }
+      ]
+    ]
+  },
+  {
+    "location": {
+      "start": 4,
+      "end": 4,
+      "text": "Read the passage and complete the gaps using the future continuous or the future perfect with <i>will</i>."
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": null,
+          "stem": {
+            "format": "moodle",
+            "text": "Read the passage and complete the gaps using the future continuous or the future perfect with <i>will</i>."
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 6,
+      "end": 6,
+      "text": "<b>A bright future for our town</b>"
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": null,
+          "stem": {
+            "format": "moodle",
+            "text": "<b>A bright future for our town</b>"
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 8,
+      "end": 8,
+      "text": "In five years' time our town will be completely different. More people {1:SA:=will be travelling} (travel) by bicycle as the council {1:SA:=will have constructed} (construct) more bike lanes. They {1:SA:=will have pedestrianised~='ll have pedestrianised} (pedestrianise) the city centre and people {1:SA:=will be strolling} (stroll) round the traffic-free streets. The council {1:SA:=will have renovated} (renovated) the old buildings such as the Town Hall and {1:SA:=will have built} (build) new facilities such as a gym and a concert hall. The river authorities {1:SA:=will have cleaned up} (clean up) the river bank and people {1:SA:=will be canoeing} (canoe) on the water. Of course, all these changes will cost money, but we're sure it will be worth it."
+    },
+    "result": [
+      null,
+      [
+        {
+          "message": "Expected \"}\" but \":\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 76,
+              "line": 8,
+              "column": 74
+            },
+            "end": {
+              "offset": 77,
+              "line": 8,
+              "column": 75
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected \"}\" but \":\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 79,
+              "line": 8,
+              "column": 77
+            },
+            "end": {
+              "offset": 80,
+              "line": 8,
+              "column": 78
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected \"}\" but \"=\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 80,
+              "line": 8,
+              "column": 78
+            },
+            "end": {
+              "offset": 81,
+              "line": 8,
+              "column": 79
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 136,
+              "line": 8,
+              "column": 134
+            },
+            "end": {
+              "offset": 137,
+              "line": 8,
+              "column": 135
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 138,
+              "line": 8,
+              "column": 136
+            },
+            "end": {
+              "offset": 139,
+              "line": 8,
+              "column": 137
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 141,
+              "line": 8,
+              "column": 139
+            },
+            "end": {
+              "offset": 142,
+              "line": 8,
+              "column": 140
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 142,
+              "line": 8,
+              "column": 140
+            },
+            "end": {
+              "offset": 143,
+              "line": 8,
+              "column": 141
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 164,
+              "line": 8,
+              "column": 162
+            },
+            "end": {
+              "offset": 165,
+              "line": 8,
+              "column": 163
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 200,
+              "line": 8,
+              "column": 198
+            },
+            "end": {
+              "offset": 201,
+              "line": 8,
+              "column": 199
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 202,
+              "line": 8,
+              "column": 200
+            },
+            "end": {
+              "offset": 203,
+              "line": 8,
+              "column": 201
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 205,
+              "line": 8,
+              "column": 203
+            },
+            "end": {
+              "offset": 206,
+              "line": 8,
+              "column": 204
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 206,
+              "line": 8,
+              "column": 204
+            },
+            "end": {
+              "offset": 207,
+              "line": 8,
+              "column": 205
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"~\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 231,
+              "line": 8,
+              "column": 229
+            },
+            "end": {
+              "offset": 232,
+              "line": 8,
+              "column": 230
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 232,
+              "line": 8,
+              "column": 230
+            },
+            "end": {
+              "offset": 233,
+              "line": 8,
+              "column": 231
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 256,
+              "line": 8,
+              "column": 254
+            },
+            "end": {
+              "offset": 257,
+              "line": 8,
+              "column": 255
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 301,
+              "line": 8,
+              "column": 299
+            },
+            "end": {
+              "offset": 302,
+              "line": 8,
+              "column": 300
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 303,
+              "line": 8,
+              "column": 301
+            },
+            "end": {
+              "offset": 304,
+              "line": 8,
+              "column": 302
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 306,
+              "line": 8,
+              "column": 304
+            },
+            "end": {
+              "offset": 307,
+              "line": 8,
+              "column": 305
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 307,
+              "line": 8,
+              "column": 305
+            },
+            "end": {
+              "offset": 308,
+              "line": 8,
+              "column": 306
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 325,
+              "line": 8,
+              "column": 323
+            },
+            "end": {
+              "offset": 326,
+              "line": 8,
+              "column": 324
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 380,
+              "line": 8,
+              "column": 378
+            },
+            "end": {
+              "offset": 381,
+              "line": 8,
+              "column": 379
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 382,
+              "line": 8,
+              "column": 380
+            },
+            "end": {
+              "offset": 383,
+              "line": 8,
+              "column": 381
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 385,
+              "line": 8,
+              "column": 383
+            },
+            "end": {
+              "offset": 386,
+              "line": 8,
+              "column": 384
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 386,
+              "line": 8,
+              "column": 384
+            },
+            "end": {
+              "offset": 387,
+              "line": 8,
+              "column": 385
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 406,
+              "line": 8,
+              "column": 404
+            },
+            "end": {
+              "offset": 407,
+              "line": 8,
+              "column": 405
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 464,
+              "line": 8,
+              "column": 462
+            },
+            "end": {
+              "offset": 465,
+              "line": 8,
+              "column": 463
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 466,
+              "line": 8,
+              "column": 464
+            },
+            "end": {
+              "offset": 467,
+              "line": 8,
+              "column": 465
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 469,
+              "line": 8,
+              "column": 467
+            },
+            "end": {
+              "offset": 470,
+              "line": 8,
+              "column": 468
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 470,
+              "line": 8,
+              "column": 468
+            },
+            "end": {
+              "offset": 471,
+              "line": 8,
+              "column": 469
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 486,
+              "line": 8,
+              "column": 484
+            },
+            "end": {
+              "offset": 487,
+              "line": 8,
+              "column": 485
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 567,
+              "line": 8,
+              "column": 565
+            },
+            "end": {
+              "offset": 568,
+              "line": 8,
+              "column": 566
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 569,
+              "line": 8,
+              "column": 567
+            },
+            "end": {
+              "offset": 570,
+              "line": 8,
+              "column": 568
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 572,
+              "line": 8,
+              "column": 570
+            },
+            "end": {
+              "offset": 573,
+              "line": 8,
+              "column": 571
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 573,
+              "line": 8,
+              "column": 571
+            },
+            "end": {
+              "offset": 574,
+              "line": 8,
+              "column": 572
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 594,
+              "line": 8,
+              "column": 592
+            },
+            "end": {
+              "offset": 595,
+              "line": 8,
+              "column": 593
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 633,
+              "line": 8,
+              "column": 631
+            },
+            "end": {
+              "offset": 634,
+              "line": 8,
+              "column": 632
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 635,
+              "line": 8,
+              "column": 633
+            },
+            "end": {
+              "offset": 636,
+              "line": 8,
+              "column": 634
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 638,
+              "line": 8,
+              "column": 636
+            },
+            "end": {
+              "offset": 639,
+              "line": 8,
+              "column": 637
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 639,
+              "line": 8,
+              "column": 637
+            },
+            "end": {
+              "offset": 640,
+              "line": 8,
+              "column": 638
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 656,
+              "line": 8,
+              "column": 654
+            },
+            "end": {
+              "offset": 657,
+              "line": 8,
+              "column": 655
+            }
+          },
+          "name": "SyntaxError"
+        }
+      ]
+    ]
+  },
+  {
+    "location": {
+      "start": 11,
+      "end": 12,
+      "text": "::U6 p64 5 Future-perfect-&-continuous::\nRead the rest of the article and choose the correct option."
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": "U6 p64 5 Future-perfect-&-continuous",
+          "stem": {
+            "format": "moodle",
+            "text": "Read the rest of the article and choose the correct option."
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 14,
+      "end": 14,
+      "text": "I think by 2050 we'll {1:MC:~=be watching~have watched} an increasing number of 3D films. Film-makers may even {1:MC:~be finding~=have found} a way to project our faces onto the characters on the screen by that time. I think here in Hollywood we will still {1:MC:~=be making~have made} films — I don't think any other country will {1:MC:~be replacing~=have replaced} us as the film-making centre of the world."
+    },
+    "result": [
+      null,
+      [
+        {
+          "message": "Expected \"}\" but \":\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 27,
+              "line": 14,
+              "column": 25
+            },
+            "end": {
+              "offset": 28,
+              "line": 14,
+              "column": 26
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected \"}\" but \":\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 30,
+              "line": 14,
+              "column": 28
+            },
+            "end": {
+              "offset": 31,
+              "line": 14,
+              "column": 29
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected \"}\" but \"~\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 31,
+              "line": 14,
+              "column": 29
+            },
+            "end": {
+              "offset": 32,
+              "line": 14,
+              "column": 30
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected \"}\" but \"=\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 32,
+              "line": 14,
+              "column": 30
+            },
+            "end": {
+              "offset": 33,
+              "line": 14,
+              "column": 31
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected \"}\" but \"~\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 44,
+              "line": 14,
+              "column": 42
+            },
+            "end": {
+              "offset": 45,
+              "line": 14,
+              "column": 43
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 114,
+              "line": 14,
+              "column": 112
+            },
+            "end": {
+              "offset": 115,
+              "line": 14,
+              "column": 113
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 116,
+              "line": 14,
+              "column": 114
+            },
+            "end": {
+              "offset": 117,
+              "line": 14,
+              "column": 115
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 119,
+              "line": 14,
+              "column": 117
+            },
+            "end": {
+              "offset": 120,
+              "line": 14,
+              "column": 118
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"~\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 120,
+              "line": 14,
+              "column": 118
+            },
+            "end": {
+              "offset": 121,
+              "line": 14,
+              "column": 119
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"~\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 131,
+              "line": 14,
+              "column": 129
+            },
+            "end": {
+              "offset": 132,
+              "line": 14,
+              "column": 130
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 132,
+              "line": 14,
+              "column": 130
+            },
+            "end": {
+              "offset": 133,
+              "line": 14,
+              "column": 131
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 143,
+              "line": 14,
+              "column": 141
+            },
+            "end": {
+              "offset": 144,
+              "line": 14,
+              "column": 142
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 260,
+              "line": 14,
+              "column": 258
+            },
+            "end": {
+              "offset": 261,
+              "line": 14,
+              "column": 259
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 262,
+              "line": 14,
+              "column": 260
+            },
+            "end": {
+              "offset": 263,
+              "line": 14,
+              "column": 261
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 265,
+              "line": 14,
+              "column": 263
+            },
+            "end": {
+              "offset": 266,
+              "line": 14,
+              "column": 264
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"~\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 266,
+              "line": 14,
+              "column": 264
+            },
+            "end": {
+              "offset": 267,
+              "line": 14,
+              "column": 265
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 267,
+              "line": 14,
+              "column": 265
+            },
+            "end": {
+              "offset": 268,
+              "line": 14,
+              "column": 266
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"~\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 277,
+              "line": 14,
+              "column": 275
+            },
+            "end": {
+              "offset": 278,
+              "line": 14,
+              "column": 276
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 287,
+              "line": 14,
+              "column": 285
+            },
+            "end": {
+              "offset": 288,
+              "line": 14,
+              "column": 286
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 334,
+              "line": 14,
+              "column": 332
+            },
+            "end": {
+              "offset": 335,
+              "line": 14,
+              "column": 333
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 336,
+              "line": 14,
+              "column": 334
+            },
+            "end": {
+              "offset": 337,
+              "line": 14,
+              "column": 335
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 339,
+              "line": 14,
+              "column": 337
+            },
+            "end": {
+              "offset": 340,
+              "line": 14,
+              "column": 338
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"~\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 340,
+              "line": 14,
+              "column": 338
+            },
+            "end": {
+              "offset": 341,
+              "line": 14,
+              "column": 339
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"~\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "~",
+          "location": {
+            "start": {
+              "offset": 353,
+              "line": 14,
+              "column": 351
+            },
+            "end": {
+              "offset": 354,
+              "line": 14,
+              "column": 352
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 354,
+              "line": 14,
+              "column": 352
+            },
+            "end": {
+              "offset": 355,
+              "line": 14,
+              "column": 353
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 368,
+              "line": 14,
+              "column": 366
+            },
+            "end": {
+              "offset": 369,
+              "line": 14,
+              "column": 367
+            }
+          },
+          "name": "SyntaxError"
+        }
+      ]
+    ]
+  },
+  {
+    "location": {
+      "start": 18,
+      "end": 18,
+      "text": "::U6 p64 6.0 Future perfect & continuous::Complete the sentences with the future continuous or future perfect form of the verbs in brackets."
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": "U6 p64 6.0 Future perfect & continuous",
+          "stem": {
+            "format": "moodle",
+            "text": "Complete the sentences with the future continuous or future perfect form of the verbs in brackets."
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 20,
+      "end": 20,
+      "text": "::U6 p64 6.1 Future perfect & continuous::[html]By 2050, most young people {=will have stopped=will have stopped} (<i>stop</i>) going to the cinema."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U6 p64 6.1 Future perfect & continuous",
+          "stem": {
+            "format": "html",
+            "text": "By 2050, most young people  _____ (<i>stop</i>) going to the cinema."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "will have stopped"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "will have stopped"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 22,
+      "end": 22,
+      "text": "::U6 p64 6.2 Future perfect & continuous::[html]By 2050, everybody will {=be using} (<i>use</i>) surround sound systems with their TVs."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U6 p64 6.2 Future perfect & continuous",
+          "stem": {
+            "format": "html",
+            "text": "By 2050, everybody will  _____ (<i>use</i>) surround sound systems with their TVs."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "be using"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 24,
+      "end": 24,
+      "text": "::U6 p64 6.3 Future perfect & continuous::[html]By 2050, we may {=be choosing} (<i>choose</i>) from a huge cyber library whatever television programme we want to watch."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U6 p64 6.3 Future perfect & continuous",
+          "stem": {
+            "format": "html",
+            "text": "By 2050, we may  _____ (<i>choose</i>) from a huge cyber library whatever television programme we want to watch."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "be choosing"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 26,
+      "end": 26,
+      "text": "::U6 p64 6.4 Future perfect & continuous::[html]By 2050, we'll {=be interacting} (<i>interact</i>) with the screen when we move and speak."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U6 p64 6.4 Future perfect & continuous",
+          "stem": {
+            "format": "html",
+            "text": "By 2050, we'll  _____ (<i>interact</i>) with the screen when we move and speak."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "be interacting"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 28,
+      "end": 28,
+      "text": "::U6 p64 6.5 Future perfect & continuous::[html]By 2050, they might {=have invented} (<i>invent</i>) contact lenses with a chip inside so that we can watch the screen in 3D."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U6 p64 6.5 Future perfect & continuous",
+          "stem": {
+            "format": "html",
+            "text": "By 2050, they might  _____ (<i>invent</i>) contact lenses with a chip inside so that we can watch the screen in 3D."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "have invented"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 30,
+      "end": 30,
+      "text": "::U6 p64 6.6 Future perfect & continuous::[html]By 2050, holographic TV screens will {=be projecting} (<i>project</i>) images around our rooms at home."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U6 p64 6.6 Future perfect & continuous",
+          "stem": {
+            "format": "html",
+            "text": "By 2050, holographic TV screens will  _____ (<i>project</i>) images around our rooms at home."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "be projecting"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  }
+]
