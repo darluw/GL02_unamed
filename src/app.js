@@ -1,4 +1,3 @@
-const parse= require("gift-pegjs");
 const fs = require('fs');
 const login = require("./login.js");
 const prompt = require("prompt-sync")();
