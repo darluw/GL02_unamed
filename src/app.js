@@ -1,15 +1,23 @@
-const parse= require("gift-pegjs");
 const fs = require('fs');
 const login = require("./login.js");
 const prompt = require("prompt-sync")();
 
 
-let app = ()=>{
-    main();
+
+let app = () =>{
+    menu();
+
 }
 
-let main = ()=>{
-    console.log("Bienvenue dans le quiz");
+
+
+
+
+
+let menu = () =>{
+    console.log("=====================================");
+    console.log("| Bienvenue dans le gestionnaire de QCM |");
+    console.log("=====================================");
     console.log("1. Login");
     console.log("2. Register");
     console.log("3. Exit");
@@ -30,7 +38,9 @@ let main = ()=>{
     }
 }
 
-app();
+
+
+
 
 
 

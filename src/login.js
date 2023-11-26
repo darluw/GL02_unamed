@@ -15,6 +15,7 @@ let login = ()=>{
     let user = jsonContent.users.find((user) => user.username === username && user.password === password);
     if(user){
         console.log("Welcome " + user.username);
+
     }else{
         console.log("Wrong username or password");
         let choice = prompt("Voulez-vous réessayer ou vous inscrire ? (1) Réessayer | (2) s'inscrire | (3) Exit  :")
