@@ -62,5 +62,4 @@ let correctFile = () =>{
         });
     });
 }
-
-correctFile();
+jsonParse(); // tu remplace par jsonParse() pour avoir les json
