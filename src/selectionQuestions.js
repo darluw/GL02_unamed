@@ -6,7 +6,50 @@ const prompt = require("prompt-sync")();
 
 const questions = [];
 
-async function start() {
+let fileGestion = () =>{
+    console.log("Bienvenue dans le gestionnaire de fichier");
+    console.log("Vous avez pour l'instant " + questions.length + " questions dans votre examen");
+    console.log("Vous pouvez ajouter jusqu'à 20 questions");
+    console.log("Que voulez-vous faire ?\n");
+    console.log("1 - Ajouter une question");
+    console.log("2 - Supprimer une question");
+    console.log("3 - Afficher vos questions");
+    console.log("4 - Générer l'examen");
+    console.log("5 - Quitter le gestionnaire de fichier");
+
+    let choix = prompt("Votre choix : ");
+    switch (choix){
+        case "1":
+            console.log("Vous avez choisi d'ajouter une question");
+            choixExamen()
+            break;
+        case "2":
+            console.log("Vous avez choisi de supprimer une question");
+            supprimerQuestion();
+            break;
+        case "3":
+            console.log("Vous avez choisi d'afficher vos questions");
+            afficherQuestions();
+            break;
+        case "4":
+            console.log("Vous avez choisi de générer l'examen");
+            genererExamen();
+            break;
+        case "5":
+            console.log("Vous avez choisi de quitter le gestionnaire de fichier");
+            break;
+        default:
+            console.log("Vous n'avez pas choisi une option valide");
+            fileGestion();
+    }
+
+
+}
+
+
+
+
+async function choixExamen() {
     try {
         const files = await fs.readdir(folderPath);
         let compteur = 1;
@@ -15,8 +58,10 @@ async function start() {
             const filePath = path.join(folderPath, file);
             const fileContent = await fs.readFile(filePath, 'utf8');
 
+
+
             const parsedPath = path.parse(file);
-            console.log("\n" + compteur + " - " + parsedPath.name);
+            console.log("\n" + compteur + " - " + parsedPath.name+ parsedPath.ext);
             compteur++;
         }
 
@@ -51,7 +96,11 @@ async function start() {
 
 async function choixFichier(files) {
     return new Promise(resolve => {
-        let index = prompt("Numero du fichier à consulter: ");
+        let index = prompt("Numero du fichier à consulter (exit) pour revenir en arrière: ");
+        if (index === "exit") {
+            console.log("Vous etes sortis de la fonction");
+            process.exit();
+        }
         let i = parseInt(index);
         let fichier = files[i - 1];
 
@@ -122,6 +171,22 @@ async function entrerDansFichier(selectedFile) {
 }
 
 
+function supprimerQuestion() {
+    displayQuestions();
+    let index="-1";
+    while((parseInt(index) < 0 || parseInt(index) > questions.length)&& index != "exit"){
+        index = prompt("Numéro de la question à supprimer (exit) pour revenir en arrière : ");
+    }
+    if (index === "exit"){
+        console.log("Vous etes sortis de la fonction");
+        //retourner a la fonction d'avant (choixFichier)
+
+    }
+    index = parseInt(index);
+    questions.splice(index, 1);
+    console.log("Question supprimée");
+}
+
 function extractQuestions(fileContent) {
     const questionRegex = /::(.+?)::/g;
     const matches = fileContent.matchAll(questionRegex);
@@ -132,6 +197,26 @@ function extractQuestions(fileContent) {
     }
 
     return questionsFile;
+}
+
+
+
+
+
+let genererExamen = () => {
+    if (questions.length>=15) {
+        console.log("Il y a trop de questions dans la selection, veuillez en supprimer");
+    }
+    //demander le nom du fichier
+    let nameFile = prompt("Nom du fichier : ");
+
+}
+
+afficherQuestions = () => {
+    questions.forEach(question => {
+        console.log(`${questions.indexOf(question)} --> ${question}`);
+    });
+
 }
 
 start();
