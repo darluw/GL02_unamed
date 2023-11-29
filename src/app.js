@@ -1,6 +1,7 @@
 const fs = require('fs');
 const login = require("./login.js");
 const prompt = require("prompt-sync")();
+const accueil = require("./accueil.js");
 
 
 
@@ -24,7 +25,8 @@ let menu = () =>{
     let choice = prompt("Votre choix : ");
     switch (choice){
         case "1":
-            login.login();
+            let user = login.login();
+            accueil.accueil(user);
             break;
         case "2":
             login.register();
@@ -41,8 +43,7 @@ let menu = () =>{
 
 
 
-
-
+app();
 
 
 

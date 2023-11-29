@@ -90,4 +90,4 @@ function createVCard() {
 
 }
 
-//createVCard();
+module.exports = {createVCard};
