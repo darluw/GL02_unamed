@@ -6,6 +6,9 @@ const prompt = require("prompt-sync")();
 
 const questions = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7", "Question 8", "Question 9", "Question 10", "Question 11", "Question 12", "Question 13", "Question 14", "Question 15"];
 
+/**
+ * Méthode qui permet gerer le choix de l'utilisateur
+ */
 let fileGestion = () =>{
     console.log("Bienvenue dans le gestionnaire de fichier");
     console.log("Vous avez pour l'instant " + questions.length + " questions dans votre examen");
@@ -42,20 +45,21 @@ let fileGestion = () =>{
             console.log("Vous n'avez pas choisi une option valide");
             fileGestion();
     }
-
-
 }
 
 
-
-
+/**
+ * Méthode qui permet d'ajouter une question dans le tableau de questions
+ * @returns {Promise<void>} - Résolution de la promesse
+ */
 async function choixExamen() {
     try {
-        console.log("slattttttttttttttt");
         const files = await fs.readdir(folderPath);
 
+        // Afficher les fichiers
         await affichageDossier(files);
 
+        // Demander à l'utilisateur de choisir un fichier
         while (questions.length < 15) {
             let numFichier = await choixFichier(files); // Attendre la résolution de la promesse
             console.log("\nEntree dans le fichier " + files[numFichier - 1]);
@@ -86,6 +90,10 @@ async function choixExamen() {
     }
 }
 
+/**
+ * Méthode qui permet d'entrer dans un fichier
+ * @returns {Promise<void>} - Résolution de la promesse
+ */
 let affichageDossier = async () => {
     const files = await fs.readdir(folderPath);
     let compteur = 1;
@@ -100,6 +108,11 @@ let affichageDossier = async () => {
     }
 }
 
+/**
+ * Méthode qui permet de choisir un fichier
+ * @param files - Fichier choisi par l'utilisateur
+ * @returns {Promise<unknown>} - Résolution de la promesse
+ */
 async function choixFichier(files) {
     return new Promise(resolve => {
         let index = prompt("Numero du fichier à consulter ou (exit) pour revenir en arrière: ");
@@ -132,6 +145,11 @@ async function choixFichier(files) {
     });
 }
 
+/**
+ * Méthode qui permet d'entrer dans un fichier
+ * @param selectedFile - Fichier choisi par l'utilisateur
+ * @returns {Promise<void>} - Résolution de la promesse
+ */
 async function entrerDansFichier(selectedFile) {
     const filePath = path.join(folderPath, selectedFile); // Utilisation de folderPath
 
@@ -176,8 +194,11 @@ async function entrerDansFichier(selectedFile) {
     }
 }
 
-
+/**
+ * Méthode qui permet de supprimer une question dans le tableau de questions
+ */
 let supprimerQuestion = () => {
+    //afficher les questions du tableau
     afficherQuestions();
     let index="-1";
     while((parseInt(index) < 0 || parseInt(index) > questions.length)&& index != "exit"){
@@ -193,6 +214,11 @@ let supprimerQuestion = () => {
     console.log("Question supprimée");
 }
 
+/**
+ * Méthode qui permet d'extraire les questions d'un fichier
+ * @param fileContent
+ * @returns {*[]}
+ */
 function extractQuestions(fileContent) {
     const questionRegex = /::(.+?)::/g;
     const matches = fileContent.matchAll(questionRegex);
@@ -206,9 +232,9 @@ function extractQuestions(fileContent) {
 }
 
 
-
-
-
+/**
+ * Méthode qui permet de generer un examen en .gift
+ */
 let genererExamen = () => {
     if (questions.length < 15) {
         console.log("Il faut au moins 15 questions pour générer un examen !");
@@ -227,6 +253,7 @@ let genererExamen = () => {
     }
 
     while (reponse.toLowerCase() === 'oui') {
+        // Changer l'index des questions
         changementIndexQuestion();
         reponse = prompt("Voulez-vous changer l'index des questions dans le tableau ? (Oui/Non)");
         while (reponse.toLowerCase() !== 'oui' && reponse.toLowerCase() !== 'non') {
@@ -241,11 +268,17 @@ let genererExamen = () => {
         fileName = prompt("Entrez le nom du fichier à générer : ");
     }
 
+    //TODO: Générer l'examen ici
+
 }
 
-
+/**
+ * Méthode qui permet de changer l'index des questions dans le tableau
+ */
 let changementIndexQuestion = () => {
+    //on affiche les questions
     afficherQuestions();
+    //on demande a l'utilisateur de choisir la question a deplacer
     let anciennePosition = parseInt(prompt("l'index de la question que vous voulez deplacer :"));
 
     while (isNaN(anciennePosition) || anciennePosition < 0 || anciennePosition >= questions.length) {
@@ -253,7 +286,7 @@ let changementIndexQuestion = () => {
         anciennePosition = parseInt(prompt("l'index de la question que vous voulez deplacer :"));
     }
 
-    // Logique pour changer l'index des questions ici
+    //on demande a l'utilisateur de choisir la nouvelle position de la question
     let nouvellePosition = parseInt(prompt("Entrez la nouvelle position de la question dans le tableau :"));
 
     while (isNaN(nouvellePosition) || nouvellePosition < 0 || nouvellePosition >= questions.length) {
@@ -261,14 +294,17 @@ let changementIndexQuestion = () => {
         nouvellePosition = parseInt(prompt("Entrez la nouvelle position de la question dans le tableau :"));
     }
 
-    // Logique pour changer l'index des questions ici
+    //on deplace la question a la nouvelle position
     questions.splice(nouvellePosition, 0, questions.splice(anciennePosition, 1)[0]);
     console.log("Question déplacée avec succès !");
-
+    //on re affiche les questions
     afficherQuestions();
 }
 
-afficherQuestions = () => {
+/**
+ * Méthode qui permet d'afficher les questions du tableau
+ */
+let afficherQuestions = () => {
     questions.forEach(question => {
         console.log(`${questions.indexOf(question)} --> ${question}`);
     });
