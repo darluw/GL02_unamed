@@ -4,6 +4,7 @@ const login = require("./login.js");
 const app = require("./app.js");
 const vCard = require("./Vcard.js");
 const pathFile = "../utils/users.json";
+const parse = require("./parse.js");
 
 // Fonction qui affiche le menu d'accueil
 let accueil = (user) => {
@@ -17,6 +18,8 @@ let accueil = (user) => {
         // Vérifier le choix
         switch (choice) {
             case "1":
+                parse.correctFile();
+                parse.jsonParse();
                 // On lance la fonction pour passer un test
                 accueil(user);
                 break;

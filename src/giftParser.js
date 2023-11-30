@@ -6,7 +6,13 @@ const folderPath = "../files/";
 
 let parse = new Parser();
 let jsonParse = () =>{
+
+
     let quiz = null;
+    if(!fs.existsSync('../jsonResult')){
+        fs.mkdirSync('../jsonResult');
+    }
+
     fs.readdir(folderPath, (err, files) => {
         if (err) {
             console.error("Erreur lors de la lecture du dossier :", err);
@@ -54,7 +60,7 @@ let correctFile = () =>{
                 //faire un regex pour remplacer les ~= par =
                 fileContent = fileContent.replace(/~=/g, "=");
 
-                fs.writeFile(`../correctFiles/${file}`, fileContent, (err) => {
+                fs.writeFile(filePath, fileContent, (err) => {
                     if (err) throw err;
                     console.log('The file has been saved!');
                 });
@@ -62,4 +68,6 @@ let correctFile = () =>{
         });
     });
 }
-jsonParse(); // tu remplace par jsonParse() pour avoir les json
+
+
+module.exports = {jsonParse, correctFile};

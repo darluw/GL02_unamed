@@ -4,10 +4,8 @@ const prompt = require("prompt-sync")();
 const accueil = require("./accueil.js");
 
 
-
 let app = () =>{
     menu();
-
 }
 
 
@@ -39,11 +37,4 @@ let menu = () =>{
             break;
     }
 }
-
-
-
-
 app();
-
-
-
