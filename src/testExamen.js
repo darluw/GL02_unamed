@@ -9,7 +9,7 @@ let chargerExamen = () =>{
 
 
     // Charger le fichier JSON
-    fs.readFile("../jsonResult/U2-p22-Gra-Ing_or_inf.gift.json", "utf8", (err, data) => {
+    fs.readFile("../jsonResult/U6-p67-Review.gift.json", "utf8", (err, data) => {
 
         if (err) {
             console.error(err);
@@ -45,7 +45,8 @@ let testExamen = (jsonExamen) =>{
                 nbQuestions++;
                 afficherReponses(question.result[0][0]?.choices);
                 let reponse = prompt("Votre réponse : ");
-                while(reponse==="" || reponse < 0 || reponse > question.result[0][0]?.choices.length){
+
+                while(reponse==="" || reponse < 0 || reponse > question.result[0][0]?.choices.length|| !isNaN(reponse)){
                     reponse = prompt("Votre réponse : ");
                 }
                 if(question.result[0][0]?.choices[reponse-1].isCorrect){
@@ -86,15 +87,32 @@ let testExamen = (jsonExamen) =>{
                 //calcul du score
                 score += verifierReponseMatching(question.result[0][0]?.matchPairs, dictionnaireQuestionReponse);
                 break;
-            case "short":
+            case "Short":
                 console.log(question.result[0][0]?.stem.text);
                 nbQuestions++;
                 let reponseShort = prompt("Votre réponse : ");
-                //TODO : vérifier la réponse
+                while(reponseShort===""){
+                    reponseShort = prompt("Votre réponse : ");
+                }
+                if(verifierReponseShort(question.result[0][0]?.choices, reponseShort)){score++;}
+                console.log(score);
+
+                break;
 
 
         }
     });
+}
+
+let verifierReponseShort = (question, reponse) =>{
+    let estCorrect = false;
+    question.forEach(mot => {
+        if(mot.text.text.toLowerCase() === reponse.toLowerCase()){
+            console.log("Correct");
+            estCorrect = true;
+        }
+    })
+    return estCorrect;
 }
 
 /**
@@ -178,7 +196,6 @@ let verifierReponseMatching = (matchPairs, dictionnaireQuestionReponse) =>{
             score++;
         }
     });
-    console.log(`Votre score est de ${score}/${matchPairs.length}`);
     return score;
 }
 
