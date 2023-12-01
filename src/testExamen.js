@@ -45,8 +45,9 @@ let testExamen = (jsonExamen) =>{
                 nbQuestions++;
                 afficherReponses(question.result[0][0]?.choices);
                 let reponse = prompt("Votre réponse : ");
-
-
+                while(reponse==="" || reponse < 0 || reponse > question.result[0][0]?.choices.length){
+                    reponse = prompt("Votre réponse : ");
+                }
                 if(question.result[0][0]?.choices[reponse-1].isCorrect){
                     score++;
                     console.log("Correct");
@@ -69,11 +70,11 @@ let testExamen = (jsonExamen) =>{
                     afficherMatchings(lstQuestions, lstReponses);
                     // récupération des index des questions et des réponses
                     let questionMatching = prompt("veuillez entrer l'index de votre question de gauche : ");
-                    while(questionMatching < 0 || questionMatching > lstQuestions.length){
+                    while(questionMatching < 0 || questionMatching >= lstQuestions.length){
                         questionMatching = prompt("veuillez entrer l'index de votre question de gauche : ");
                     }
                     let reponseMatching = prompt("veuilleez entrer l'index de votre question de droite : ");
-                    while(reponseMatching < 0 || reponseMatching > lstReponses.length){
+                    while(reponseMatching < 0 || reponseMatching >= lstReponses.length){
                         reponseMatching = prompt("veuilleez entrer l'index de votre question de droite : ");
                     }
                     // ajout de la question et de la réponse dans le dictionnaire
@@ -85,6 +86,12 @@ let testExamen = (jsonExamen) =>{
                 //calcul du score
                 score += verifierReponseMatching(question.result[0][0]?.matchPairs, dictionnaireQuestionReponse);
                 break;
+            case "short":
+                console.log(question.result[0][0]?.stem.text);
+                nbQuestions++;
+                let reponseShort = prompt("Votre réponse : ");
+                //TODO : vérifier la réponse
+
 
         }
     });

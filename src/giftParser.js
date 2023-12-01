@@ -6,8 +6,6 @@ const folderPath = "../files/";
 
 let parse = new Parser();
 let jsonParse = () =>{
-
-
     let quiz = null;
     if(!fs.existsSync('../jsonResult')){
         fs.mkdirSync('../jsonResult');
@@ -68,6 +66,6 @@ let correctFile = () =>{
         });
     });
 }
-
+jsonParse();
 
 module.exports = {jsonParse, correctFile};
