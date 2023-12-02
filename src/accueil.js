@@ -8,6 +8,8 @@ const parse = require("./parse.js");
 
 // Fonction qui affiche le menu d'accueil
 let accueil = (user) => {
+    parse.correctFile();
+    parse.jsonParse();
     // Vérifier le type d'utilisateur
     if (user.type === "etudiant") {
         // Afficher le menu
@@ -18,8 +20,6 @@ let accueil = (user) => {
         // Vérifier le choix
         switch (choice) {
             case "1":
-                parse.correctFile();
-                parse.jsonParse();
                 // On lance la fonction pour passer un test
                 accueil(user);
                 break;
