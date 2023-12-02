@@ -9,7 +9,7 @@ let chargerExamen = () =>{
 
 
     // Charger le fichier JSON
-    fs.readFile("../jsonResult/U6-p67-Review.gift.json", "utf8", (err, data) => {
+    fs.readFile("../jsonResult/EM-U42-Ultimate.gift.json", "utf8", (err, data) => {
 
         if (err) {
             console.error(err);
@@ -35,19 +35,26 @@ let testExamen = (jsonExamen) =>{
     let nbQuestions = 0;
     //Parcourir le fichier JSON
     jsonExamen.forEach(question => {
+        if(question.result[0] === null){
+            return;
+        }
+        //Récupérer le type de la question
         const type = question.result[0][0]?.type;
 
 
         //Vérifier le type de la question
         switch (type) {
+            case "Description":
+                console.log(question.result[0][0]?.stem.text);
+                break;
             case "MC":
                 console.log(question.result[0][0]?.stem.text);
                 nbQuestions++;
                 afficherReponses(question.result[0][0]?.choices);
                 let reponse = prompt("Votre réponse : ");
 
-                while(reponse==="" || reponse < 0 || reponse > question.result[0][0]?.choices.length|| !isNaN(reponse)){
-                    reponse = prompt("Votre réponse : ");
+                while(reponse==="" || reponse < 0 || reponse > question.result[0][0]?.choices.length|| isNaN(reponse)){
+                    reponse = prompt("Votre réponse (veuillez choisir l'index !)  : ");
                 }
                 if(question.result[0][0]?.choices[reponse-1].isCorrect){
                     score++;
@@ -55,6 +62,29 @@ let testExamen = (jsonExamen) =>{
                 }else{
                     console.log("Incorrect");
                 }
+                break;
+            case "Numerical":
+                console.log(question.result[0][0]?.stem.text);
+                nbQuestions++;
+                let reponseNumerical = prompt("Votre réponse : ");
+                while(reponseNumerical==="" || isNaN(reponseNumerical)){
+                    reponseNumerical = prompt("Votre réponse (un nombre !) : ");
+                }
+                if(verifierReponseNumerical(question.result[0][0]?.choices, reponseNumerical)){
+                    score++;
+                    console.log("Correct");
+                }else{
+                    console.log("Incorrect");
+                }
+                break;
+            case "TF":
+                console.log(question.result[0][0]?.stem.text);
+                nbQuestions++;
+                let reponseTF = prompt("Votre réponse (true/false) : ");
+                while(reponseTF.toLowerCase() !== "true" && reponseTF.toLowerCase() !== "false"){
+                    reponseTF = prompt("Votre réponse (true/false) : ");
+                }
+                score+=verifierReponseTF(question.result[0][0], reponseTF);
                 break;
             case "Matching":
                 // affichage du titre de la question
@@ -98,10 +128,44 @@ let testExamen = (jsonExamen) =>{
                 console.log(score);
 
                 break;
-
-
         }
     });
+}
+
+let verifierReponseNumerical = (choices, reponseUtilisateur)=> {
+    // Convertir la réponse utilisateur en nombre
+    const reponseNumerique = parseFloat(reponseUtilisateur);
+    // Vérifier si la réponse utilisateur est un nombre
+    if (isNaN(reponseNumerique)) {
+        return false;
+    }
+    // Vérifier chaque choix de la question
+    for (const choix of choices) {
+        // Vérifier si la réponse utilisateur est dans la plage spécifiée par le choix
+        if (choix.isCorrect && verifierPlageNumerique(choix.text, reponseNumerique)) {
+            return true;
+        }
+    }
+    // Aucun choix n'a été trouvé correspondant à la réponse utilisateur
+    return false;
+}
+
+let verifierPlageNumerique = (plage, reponseNumerique)=> {
+    // Vérifier si la réponse utilisateur est dans la plage spécifiée
+    const numeroPlage = parseFloat(plage.number);
+    const demiPlage = parseFloat(plage.range) / 2;
+    return reponseNumerique >= numeroPlage - demiPlage && reponseNumerique <= numeroPlage + demiPlage;
+}
+
+let verifierReponseTF = (question, reponse) =>{
+    console.log(question.isTrue);
+    if(String(question.isTrue).toLowerCase() === reponse.toLowerCase()){
+        console.log(question.correctFeedback.text);
+        return 1;
+    }else{
+        console.log(question.incorrectFeedback.text);
+        return 0;
+    }
 }
 
 let verifierReponseShort = (question, reponse) =>{
