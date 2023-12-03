@@ -38,7 +38,9 @@ let accueil = (user) => {
         // Afficher le menu
         console.log("1. Créer un QCM");
         console.log("2. Créer une vCard");
-        console.log("3. Se déconnecter")
+        console.log("3. Simulation du passsage d'un test");
+        console.log("4. Se déconnecter");
+        
         // Demander le choix
         let choice = prompt("Votre choix : ");
         // Vérifier le choix
@@ -52,7 +54,11 @@ let accueil = (user) => {
                 vCard.createVCard();
                 accueil(user);
                 break;
-            case "3": 
+            case "3":
+                // On lance la fonction pour le passage d'un test
+                accueil(user);
+                break;
+            case "4": 
                 // On se déconnecte
                 break;
             default:
