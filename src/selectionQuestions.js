@@ -4,46 +4,111 @@ const Parser = require("gift-parser-ide").default;
 const folderPath = "../files/";
 const prompt = require("prompt-sync")();
 
-const questions = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7", "Question 8", "Question 9", "Question 10", "Question 11", "Question 12", "Question 13", "Question 14", "Question 15"];
+const questions = [
+    {
+        title: "Question 1",
+        content: "Contenu de la question 1"
+    },
+    {
+        title: "Question 2",
+        content: "Contenu de la question 2"
+    },
+    {
+        title: "Question 3",
+        content: "Contenu de la question 3"
+    },
+    {
+        title: "Question 4",
+        content: "Contenu de la question 4"
+    },
+    {
+        title: "Question 5",
+        content: "Contenu de la question 5"
+    },
+    {
+        title: "Question 6",
+        content: "Contenu de la question 6"
+    },
+    {
+        title: "Question 7",
+        content: "Contenu de la question 7"
+    },
+    {
+        title: "Question 8",
+        content: "Contenu de la question 8"
+    },
+    {
+        title: "Question 9",
+        content: "Contenu de la question 9"
+    },
+    {
+        title: "Question 10",
+        content: "Contenu de la question 10"
+    },
+    {
+        title: "Question 11",
+        content: "Contenu de la question 11"
+    },
+    {
+        title: "Question 12",
+        content: "Contenu de la question 12"
+    },
+    {
+        title: "Question 13",
+        content: "Contenu de la question 13"
+    },
+    {
+        title: "Question 14",
+        content: "Contenu de la question 14"
+    },
+    {
+        title: "Question 15",
+        content: "Contenu de la question 15"
+    }
+];
 
 /**
  * Méthode qui permet gerer le choix de l'utilisateur
  */
-let fileGestion = () =>{
+let fileGestion = async () =>{
+    let choix = "0";
     console.log("Bienvenue dans le gestionnaire de fichier");
-    console.log("Vous avez pour l'instant " + questions.length + " questions dans votre examen");
-    console.log("Vous pouvez ajouter jusqu'à 20 questions");
-    console.log("Que voulez-vous faire ?\n");
-    console.log("1 - Ajouter une question");
-    console.log("2 - Supprimer une question");
-    console.log("3 - Afficher vos questions");
-    console.log("4 - Générer l'examen");
-    console.log("5 - Quitter le gestionnaire de fichier");
+    while (choix != "5"){
+        console.log("\nVous avez pour l'instant " + questions.length + " questions dans votre examen");
+        console.log("Pour générer un examen, vous devez avoir entre 15 et 20 questions");
+        console.log("Que voulez-vous faire ?\n");
+        console.log("1 - Ajouter une question");
+        console.log("2 - Supprimer une question");
+        console.log("3 - Afficher vos questions");
+        console.log("4 - Générer l'examen");
+        console.log("5 - Quitter le gestionnaire de fichier");
 
-    let choix = prompt("Votre choix : ");
-    switch (choix){
-        case "1":
-            console.log("Vous avez choisi d'ajouter une question");
-            choixExamen()
-            break;
-        case "2":
-            console.log("Vous avez choisi de supprimer une question");
-            supprimerQuestion();
-            break;
-        case "3":
-            console.log("Vous avez choisi d'afficher vos questions");
-            afficherQuestions();
-            break;
-        case "4":
-            console.log("Vous avez choisi de générer l'examen");
-            genererExamen();
-            break;
-        case "5":
-            console.log("Vous avez choisi de quitter le gestionnaire de fichier");
-            break;
-        default:
-            console.log("Vous n'avez pas choisi une option valide");
-            fileGestion();
+        choix = prompt("Votre choix : ");
+        switch (choix){
+            case "1":
+                console.log("Vous avez choisi d'ajouter une question");
+                await choixExamen()
+                break;
+            case "2":
+                console.log("Vous avez choisi de supprimer une question");
+                supprimerQuestion();
+                break;
+            case "3":
+                console.log("Vous avez choisi d'afficher vos questions");
+                afficherQuestions();
+                break;
+            case "4":
+                console.log("Vous avez choisi de générer l'examen");
+                await genererExamen();
+                choix = 5;
+                break;
+            case "5":
+                console.log("Vous avez choisi de quitter le gestionnaire de fichier");
+                break;
+            default:
+                console.log("Vous n'avez pas choisi une option valide");
+                fileGestion();
+        }
     }
 }
 
@@ -60,30 +125,9 @@ async function choixExamen() {
         await affichageDossier(files);
 
         // Demander à l'utilisateur de choisir un fichier
-        while (questions.length < 15) {
-            let numFichier = await choixFichier(files); // Attendre la résolution de la promesse
-            console.log("\nEntree dans le fichier " + files[numFichier - 1]);
-            await entrerDansFichier(files[numFichier - 1]);
-
-        }
-        var arret = 0;
-        while (arret === 0){
-            if (questions.length >= 15 && questions.length < 20){
-                console.log("Total de question de l'examen : " + questions.length)
-                let rep = prompt("Souhaitez-vous continuer (1) ou arreter (0) ?");
-                rep = parseInt(rep);
-                if (rep === 0){
-                    fileGestion();
-                }
-                else {
-                    await affichageDossier()
-                    let numFichier = await choixFichier(files); // Attendre la résolution de la promesse
-                    console.log("\nEntree dans le fichier " + files[numFichier - 1]);
-                    await entrerDansFichier(files[numFichier - 1]);
-                }
-            }
-        }
-
+        let numFichier = await choixFichier(files); // Attendre la résolution de la promesse
+        console.log("\nEntree dans le fichier " + files[numFichier - 1]);
+        await entrerDansFichier(files[numFichier - 1]);
 
     } catch (err) {
         console.error("Erreur :", err);
@@ -116,29 +160,30 @@ let affichageDossier = async () => {
 async function choixFichier(files) {
     return new Promise(resolve => {
         let index = prompt("Numero du fichier à consulter ou (exit) pour revenir en arrière: ");
-        if (index === "exit") {
+        if (index === "exit" || index === "EXIT" || index === "Exit") {
             console.log("Vous etes sortis de la fonction");
             fileGestion();
-        }
-        let i = parseInt(index);
-        let fichier = files[i - 1];
-
-        if (fichier != null) {
-            resolve(i);// marche pas avec return i (alors que c'est un entier je pense)
         } else {
-            console.log("Fichier non trouve");
-            let choice = 0;
-            while (choice != "1" && choice != "2") {
-                choice = prompt("Voulez-vous réessayer ? (1) Réessayer | (2) Exit  :")
-                switch (choice) {
-                    case "1":
-                        resolve(choixFichier(files)); // Résoudre la promesse récursivement
-                        break;
-                    case "2":
-                        console.log("Vous etes sortis de la fonction");
-                        process.exit();
-                    default:
-                        console.log("Mauvais choix");
+            let i = parseInt(index);
+            let fichier = files[i - 1];
+
+            if (fichier != null) {
+                resolve(i);// marche pas avec return i (alors que c'est un entier je pense)
+            } else {
+                console.log("Fichier non trouve");
+                let choice = 0;
+                while (choice != "1" && choice != "2") {
+                    choice = prompt("Voulez-vous réessayer ? (1) Réessayer | (2) Exit  :")
+                    switch (choice) {
+                        case "1":
+                            resolve(choixFichier(files)); // Résoudre la promesse récursivement
+                            break;
+                        case "2":
+                            console.log("Vous etes sortis de la fonction");
+                            fileGestion();
+                        default:
+                            console.log("Mauvais choix");
+                    }
                 }
             }
         }
@@ -158,8 +203,9 @@ async function entrerDansFichier(selectedFile) {
         const questionsInFile = extractQuestions(fileContent);
         console.log(questionsInFile);
         let index = 1;
-        questionsInFile.forEach(question => {
-            console.log(`${index} - ${question.title}`);
+        questionsInFile.forEach(question => {//Affichage du titre et du contenu
+            console.log(`${index} - Titre: ${question.title}`);
+            console.log(`    Contenu: ${question.content}`);
             index++;
         });
 
@@ -175,11 +221,11 @@ async function entrerDansFichier(selectedFile) {
                 for (var j = 0; j < questions.length; j++) {
                     if (questionsInFile[selectedQuestion - 1].title === questions[j]) {
                         trouve = 1;
-                        console.log("\Question deja presente dans la selection");
+                        console.log("\nQuestion deja presente dans la selection");
                     }
                 }
                 if (trouve === 0) {
-                    questions.push(questionsInFile[selectedQuestion - 1].title);
+                    questions.push({ title: questionsInFile[selectedQuestion - 1].title, content: questionsInFile[selectedQuestion - 1].content });
                     fin = 1;
                 }
                 console.log(questions);
@@ -201,17 +247,17 @@ let supprimerQuestion = () => {
     //afficher les questions du tableau
     afficherQuestions();
     let index="-1";
-    while((parseInt(index) < 0 || parseInt(index) > questions.length)&& index != "exit"){
+    while((parseInt(index) < 0 || parseInt(index) > questions.length) && (index != "exit" || index != "EXIT" || index != "Exit")){
         index = prompt("Numéro de la question à supprimer (exit) pour revenir en arrière : ");
     }
-    if (index === "exit"){
+    if (index === "exit" || index === "EXIT" || index === "Exit"){
         console.log("Vous etes sortis de la fonction");
-        //retourner a la fonction d'avant (choixFichier)
-
+        return;
+    } else {
+        index = parseInt(index);
+        questions.splice(index, 1);
+        console.log("Question supprimée");
     }
-    index = parseInt(index);
-    questions.splice(index, 1);
-    console.log("Question supprimée");
 }
 
 /**
@@ -220,12 +266,14 @@ let supprimerQuestion = () => {
  * @returns {*[]}
  */
 function extractQuestions(fileContent) {
-    const questionRegex = /::(.+?)::/g;
+    const questionRegex = /::(.+?)::(.+?)(?=\n::|\n*$)/gs;
     const matches = fileContent.matchAll(questionRegex);
     const questionsFile = [];
 
     for (const match of matches) {
-        questionsFile.push({ title: match[1] });
+        const title = match[1].trim();
+        const content = match[2].trim();
+        questionsFile.push({ title, content }); // Ajout du titre et du contenu
     }
 
     return questionsFile;
@@ -235,7 +283,7 @@ function extractQuestions(fileContent) {
 /**
  * Méthode qui permet de generer un examen en .gift
  */
-let genererExamen = () => {
+let genererExamen = async () => {
     if (questions.length < 15) {
         console.log("Il faut au moins 15 questions pour générer un examen !");
         return;
@@ -261,16 +309,26 @@ let genererExamen = () => {
             reponse = prompt("Voulez-vous changer l'index des questions dans le tableau ? (Oui/Non)");
         }
     }
+    
+    // Écrire le contenu GIFT dans un fichier
+    const fileNameGift = prompt("Entrez le nom du fichier à générer : ");
+    const filePath = path.join(folderPath, fileNameGift + ".gift");
+
+    let giftContent = "";
+    questions.forEach((question, index) => {
+        giftContent += `::${question.title}::${question.content}\n\n`;
+    });
+
     // generer l'examen
-    let fileName = prompt("Entrez le nom du fichier à générer : ");
-    while (fileName === "") {
-        console.log("Nom de fichier invalide. Veuillez réessayer.");
-        fileName = prompt("Entrez le nom du fichier à générer : ");
+    try {
+        await fs.writeFile(filePath, giftContent, 'utf8');
+        console.log(`Fichier GIFT généré avec succès : ${fileNameGift}.gift`);
+    } catch (err) {
+        console.error("Erreur lors de la génération du fichier :", err);
     }
 
-    //TODO: Générer l'examen ici
-
 }
+
 
 /**
  * Méthode qui permet de changer l'index des questions dans le tableau
@@ -280,7 +338,6 @@ let changementIndexQuestion = () => {
     afficherQuestions();
     //on demande a l'utilisateur de choisir la question a deplacer
     let anciennePosition = parseInt(prompt("l'index de la question que vous voulez deplacer :"));
-
     while (isNaN(anciennePosition) || anciennePosition < 0 || anciennePosition >= questions.length) {
         console.log("Index invalide. Veuillez réessayer.");
         anciennePosition = parseInt(prompt("l'index de la question que vous voulez deplacer :"));
@@ -305,10 +362,16 @@ let changementIndexQuestion = () => {
  * Méthode qui permet d'afficher les questions du tableau
  */
 let afficherQuestions = () => {
-    questions.forEach(question => {
-        console.log(`${questions.indexOf(question)} --> ${question}`);
+    questions.forEach((question, index) => {
+        console.log(`${index} --> Titre: ${question.title}`);
+        console.log(`    Contenu: ${question.content}`);
     });
 
 }
 
 fileGestion();
+
+
+//Remarques
+//  - Pourquoi certaines fonctions des let (ça fait deux types différents de questions) ?
+//  - J'ai pas mis de nom au test (première ligne du fichier gift)
