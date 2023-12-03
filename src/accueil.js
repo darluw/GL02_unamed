@@ -4,7 +4,7 @@ const login = require("./login.js");
 const app = require("./app.js");
 const vCard = require("./Vcard.js");
 const pathFile = "../utils/users.json";
-const parse = require("./parse.js");
+const parse = require("./giftParser.js");
 
 // Fonction qui affiche le menu d'accueil
 let accueil = (user) => {
