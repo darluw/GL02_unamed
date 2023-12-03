@@ -31,7 +31,6 @@ let jsonParse = () =>{
 
                 fs.writeFile(`../jsonResult/${file}.json`, JSON.stringify(quiz, null, 2), (err) => {
                     if (err) throw err;
-                    console.log('The file has been saved!');
                 });
             });
         });
@@ -60,12 +59,9 @@ let correctFile = () =>{
 
                 fs.writeFile(filePath, fileContent, (err) => {
                     if (err) throw err;
-                    console.log('The file has been saved!');
                 });
             });
         });
     });
 }
-jsonParse();
-
 module.exports = {jsonParse, correctFile};
