@@ -1,4 +1,5 @@
 const fs = require('fs');
+const {accueil} = require("./accueil");
 const prompt = require("prompt-sync")();
 
 /**
@@ -130,6 +131,14 @@ let testExamen = (jsonExamen) =>{
                 break;
         }
     });
+    if (nbQuestions === 0) {
+        console.log("Aucune question n'a été trouvée dans ce fichier.");
+        console.log("Il semble que le fichier ne soit pas au bon format.");
+        return;
+    }
+    console.log("Votre score est de : " + score + "/" + nbQuestions);
+    //on retourne a l'accueil
+    accueil();
 }
 
 let verifierReponseNumerical = (choices, reponseUtilisateur)=> {
