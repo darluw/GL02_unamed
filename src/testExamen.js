@@ -31,7 +31,6 @@ let chargerExamen = (user) =>{
     }
     
     let file = files[choix-1];
-    console.log("coucou je suis la ".red);
     console.log(file);
 
 

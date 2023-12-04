@@ -24,7 +24,6 @@ let menu = () =>{
     switch (choice){
         case "1":
             let user = login.login();
-            console.log(user);
             accueil.accueil(user);
             break;
         case "2":
