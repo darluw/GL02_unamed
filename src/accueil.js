@@ -8,8 +8,7 @@ const parse = require("./giftParser.js");
 
 // Fonction qui affiche le menu d'accueil
 let accueil = (user) => {
-    parse.correctFile();
-    parse.jsonParse();
+    parse.parser();
     // Vérifier le type d'utilisateur
     if (user.type === "etudiant") {
         // Afficher le menu
