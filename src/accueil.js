@@ -5,6 +5,8 @@ const app = require("./app.js");
 const vCard = require("./Vcard.js");
 const pathFile = "../utils/users.json";
 const parse = require("./giftParser.js");
+const selectQ = require("./selectionQuestions.js")
+const examen = require("./testExamen.js");
 
 // Fonction qui affiche le menu d'accueil
 let accueil = (user) => {
@@ -20,7 +22,7 @@ let accueil = (user) => {
         switch (choice) {
             case "1":
                 // On lance la fonction pour passer un test
-                accueil(user);
+                accueil();
                 break;
             case "2":
                 // On se déconnecte
@@ -28,7 +30,7 @@ let accueil = (user) => {
             default:
                 // On affiche une erreur et on relance la fonction d'accueil
                 console.log("Wrong choice");
-                accueil(user);
+                accueil();
                 break;
         }
 
@@ -46,6 +48,7 @@ let accueil = (user) => {
         switch (choice) {
             case "1":
                 // On lance la fonction pour créer un QCM
+                selectQ.fileGestion()
                 accueil(user);
                 break;
             case "2":
@@ -55,6 +58,7 @@ let accueil = (user) => {
                 break;
             case "3":
                 // On lance la fonction pour le passage d'un test
+                examen.chargerExamen(user);
                 accueil(user);
                 break;
             case "4": 
@@ -68,5 +72,7 @@ let accueil = (user) => {
         }
     }
 }
+
+
 // Export de la fonction pour pouvoir l'appeler dans un autre fichier
 module.exports = {accueil} ; 

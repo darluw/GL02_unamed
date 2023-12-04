@@ -2,6 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const Parser = require("gift-parser-ide").default;
 const folderPath = "../files/";
+const pathFile = "../utils/users.json";
 const prompt = require("prompt-sync")();
 
 const questions = [];
@@ -308,7 +309,7 @@ let afficherQuestions = () => {
 
 }
 
-fileGestion();
+module.exports = {fileGestion};
 
 
 //Remarques
