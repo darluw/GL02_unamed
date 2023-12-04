@@ -1,35 +1,53 @@
 const fs = require('fs');
-const {accueil} = require("./accueil");
+const accueil = require("./accueil.js");
+const login = require('./login.js');
 const prompt = require("prompt-sync")();
+const pathFile = ("../utils/users.json");
+const app = require("./app.js");
+
+
+let affichageDossier = () => {
+    const files = fs.readdirSync("../jsonResult");
+    let compteur = 1;
+
+    for (const file of files) {
+        console.log(compteur + ". " + file);
+        compteur++;
+    }
+}
+
 
 /**
  * Permet de charger ke fichier JSON contenant les questions et les réponses
  */
-let chargerExamen = () =>{
+let chargerExamen = (user) =>{
     let jsonExamen;
+    affichageDossier();
+    const files = fs.readdirSync("../jsonResult");
+
+    let choix = prompt("Votre choix : ");
+    while(choix < 0 || choix > files.length || isNaN(choix)){
+        choix = prompt("Votre choix : ");
+    }
+    
+    let file = files[choix-1];
+    console.log("coucou je suis la ".red);
+    console.log(file);
+
 
 
     // Charger le fichier JSON
-    fs.readFile("../jsonResult/EM-U42-Ultimate.gift.json", "utf8", (err, data) => {
-
-        if (err) {
-            console.error(err);
-            return;
-        }
-        jsonExamen = JSON.parse(data);
-        //commencer le test
-        testExamen(jsonExamen);
-
-    });
-
-
+    let data = fs.readFileSync(`../jsonResult/${file}`, "utf8");
+    jsonExamen = JSON.parse(data);
+    //commencer le test
+    testExamen(jsonExamen, user);
 }
 
 /**
  * Permet d'éxécuter le test
  * @param jsonExamen : le fichier JSON contenant les questions et les réponses
  */
-let testExamen = (jsonExamen) =>{
+let testExamen = (jsonExamen, user) =>{
 
 
     let score = 0;
@@ -137,8 +155,7 @@ let testExamen = (jsonExamen) =>{
         return;
     }
     console.log("Votre score est de : " + score + "/" + nbQuestions);
-    //on retourne a l'accueil
-    accueil();
+
 }
 
 let verifierReponseNumerical = (choices, reponseUtilisateur)=> {
@@ -282,4 +299,4 @@ let afficherReponses = (reponses) =>{
     }
 }
 
-chargerExamen();
+module.exports = {chargerExamen};
