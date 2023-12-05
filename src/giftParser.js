@@ -2,13 +2,15 @@ const fs = require('fs');
 const path = require('path');
 const Parser = require("gift-parser-ide").default;
 
-const folderPath = "../files/";
+const folderPath = path.join(__dirname, "../files/"); // Use path.join for better cross-platform compatibility
 
 let parse = new Parser();
 let jsonParse = () => {
     let quiz = null;
-    if (!fs.existsSync('../jsonResult')) {
-        fs.mkdirSync('../jsonResult');
+    const jsonResultPath = path.join(__dirname, '../jsonResult'); // Adjusted path for jsonResult
+
+    if (!fs.existsSync(jsonResultPath)) {
+        fs.mkdirSync(jsonResultPath);
     }
 
     fs.readdir(folderPath, (err, files) => {
@@ -29,7 +31,8 @@ let jsonParse = () => {
                 parse.update(fileContent);
                 quiz = parse.result();
 
-                fs.writeFile(`../jsonResult/${file}.json`, JSON.stringify(quiz, null, 2), (err) => {
+                const jsonFilePath = path.join(jsonResultPath, `${file}.json`);
+                fs.writeFile(jsonFilePath, JSON.stringify(quiz, null, 2), (err) => {
                     if (err) throw err;
                 });
             });
@@ -67,5 +70,4 @@ const parser = async () => {
     }
 };
 
-
-module.exports = { jsonParse, correctFile, parser};
+module.exports = { jsonParse, correctFile, parser };
