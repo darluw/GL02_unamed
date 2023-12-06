@@ -5,6 +5,7 @@ const prompt = require("prompt-sync")();
 const pathFile = ("../utils/users.json");
 const app = require("./app.js");
 
+let nomFichierTest;
 
 let affichageDossier = () => {
     const files = fs.readdirSync("../jsonResult");
@@ -21,10 +22,13 @@ let affichageDossier = () => {
  * Permet de charger ke fichier JSON contenant les questions et les réponses
  */
 let chargerExamen = (user) =>{
+    console.log("slatt");
     let jsonExamen;
     affichageDossier();
     const files = fs.readdirSync("../jsonResult");
 
+
+    console.log("SLATTY");
     let choix = prompt("Votre choix : ");
     while(choix < 0 || choix > files.length || isNaN(choix)){
         choix = prompt("Votre choix : ");
@@ -38,6 +42,7 @@ let chargerExamen = (user) =>{
     // Charger le fichier JSON
     let data = fs.readFileSync(`../jsonResult/${file}`, "utf8");
     jsonExamen = JSON.parse(data);
+    nomFichierTest = file;
     //commencer le test
     testExamen(jsonExamen, user);
 }
@@ -154,6 +159,13 @@ let testExamen = (jsonExamen, user) =>{
         return;
     }
     console.log("Votre score est de : " + score + "/" + nbQuestions);
+
+    //ajouter le score dans la liste d'examen avec le nom du fichier et le score
+    let examen = {
+        nomFichier : nomFichierTest,
+        score : score,
+    }
+    user.examens.push(examen);
 
 }
 
