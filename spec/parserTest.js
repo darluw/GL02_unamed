@@ -55,16 +55,13 @@ describe('Tests for JSON parsing and correcting files', function () {
         }
 
         try {
-             parser().then(() => {
-                let nbJsonFiles = 0;
-                try {
-                    nbJsonFiles = jsonFolder.length;
-                } catch (err) {
-                    console.error("Erreur lors de la lecture du dossier :", err);
-                    throw err;
-                }
-                expect(nbFiles).toEqual(nbJsonFiles);
-            });
+             parser()
+            let nbJsonFiles = 0;
+
+             nbJsonFiles = jsonFolder.length;
+
+            expect(nbFiles).toEqual(nbJsonFiles);
+
         } catch (err) {
             console.error("Erreur lors de l'analyse des fichiers :", err);
             throw err;

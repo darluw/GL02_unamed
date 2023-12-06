@@ -2,6 +2,7 @@
 
 const pathFile = "../utils/users.json";
 const fs = require("fs");
+const {accueil} = require("./accueil");
 const prompt = require("prompt-sync")();
 
 
@@ -58,10 +59,11 @@ let register = ()=>{
         console.log("Username already taken");
         register();
     }else{
-        jsonContent.users.push({username: username, password: password,type: type});
+        jsonContent.users.push({username: username, password: password,type: type, tests: []});
         fs.writeFileSync(pathFile, JSON.stringify(jsonContent));
         console.log("User created");
-        login();
+        let user = login();
+        accueil(user);
     }
 }
 

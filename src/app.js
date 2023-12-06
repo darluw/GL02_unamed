@@ -2,9 +2,11 @@ const fs = require('fs');
 const login = require("./login.js");
 const prompt = require("prompt-sync")();
 const accueil = require("./accueil.js");
+const {parser} = require("./giftParser.js");
 
 
 let app = () =>{
+    parser();
     menu();
 }
 
@@ -13,7 +15,7 @@ let app = () =>{
 
 
 
-let menu = () =>{
+let menu =  () =>{
     console.log("=====================================");
     console.log("| Bienvenue dans le gestionnaire de QCM |");
     console.log("=====================================");
