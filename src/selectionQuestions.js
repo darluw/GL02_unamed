@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
+const {accueil} = require("./accueil");
 const Parser = require("gift-parser-ide").default;
 const folderPath = "../files/";
 const pathFile = "../utils/users.json";
