@@ -6,68 +6,7 @@ const folderPath = "../files/";
 const pathFile = "../utils/users.json";
 const prompt = require("prompt-sync")();
 
-const questions = [
-    {
-        title: "Question 1",
-        content: "Contenu de la question 1"
-    },
-    {
-        title: "Question 2",
-        content: "Contenu de la question 2"
-    },
-    {
-        title: "Question 3",
-        content: "Contenu de la question 3"
-    },
-    {
-        title: "Question 4",
-        content: "Contenu de la question 4"
-    },
-    {
-        title: "Question 5",
-        content: "Contenu de la question 5"
-    },
-    {
-        title: "Question 6",
-        content: "Contenu de la question 6"
-    },
-    {
-        title: "Question 7",
-        content: "Contenu de la question 7"
-    },
-    {
-        title: "Question 8",
-        content: "Contenu de la question 8"
-    },
-    {
-        title: "Question 9",
-        content: "Contenu de la question 9"
-    },
-    {
-        title: "Question 10",
-        content: "Contenu de la question 10"
-    },
-    {
-        title: "Question 11",
-        content: "Contenu de la question 11"
-    },
-    {
-        title: "Question 12",
-        content: "Contenu de la question 12"
-    },
-    {
-        title: "Question 13",
-        content: "Contenu de la question 13"
-    },
-    {
-        title: "Question 14",
-        content: "Contenu de la question 14"
-    },
-    {
-        title: "Question 15",
-        content: "Contenu de la question 15"
-    }
-]
+const questions = [];
 
 /**
  * Méthode qui permet de gérer le choix de l'utilisateur
