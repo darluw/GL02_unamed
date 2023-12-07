@@ -24,7 +24,12 @@ Pour utiliser l'outil en ligne de commande, suivez les étapes suivantes :
 1. Clonez ce dépôt sur votre machine locale.
 2. Ouvrez une console et accédez au répertoire du projet.
 3. Exécutez l'application en utilisant la commande `node app.js` (ou la commande spécifique à votre configuration).
+ATTENTION : Veillez à bien exécuter les installations npm nécessaires, telles que Jasmine pour les tests unitaires ou `npm install gift-parser-ide` pour le parser.
 4. Suivez les instructions à l'écran pour créer et gérer des examens.
+
+   ### Remarques :
+     - Afin que tous les fichiers soient créés, corrigés ou analysés, merci de prévoir un court temps d'attente avant que ceux-ci ne soient correctement chargés.
+     - La fonctionnalité de passage d'examen a été initialement conçue uniquement pour les professeurs, comme le spécifie le cahier des charges. Cependant, nous avons commencé à développer une fonctionnalité similaire pour le côté étudiant, que nous jugeons nécessaire pour la suite.
 
 ## Auteurs
 
