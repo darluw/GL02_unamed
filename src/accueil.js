@@ -7,6 +7,7 @@ const pathFile = "../utils/users.json";
 const {parser} = require("./giftParser.js");
 const selectQ = require("./selectionQuestions.js")
 const examen = require("./testExamen.js");
+const searchQ = require("./searchQuestions.js");
 
 // Fonction qui affiche le menu d'accueil
 let accueil = (user) => {
@@ -24,7 +25,10 @@ let accueil = (user) => {
         switch (choice) {
             case "1":
                 // On lance la fonction pour passer un test
-                accueil();
+                console.log("Passage de test pour un étudiant");
+                console.log("fonctionnalité non implémentée pour le moment");
+                console("Fonctionnalité non présente dans le cahier des charges");
+                accueil(user);
                 break;
             case "2":
                 // On se déconnecte
@@ -32,17 +36,19 @@ let accueil = (user) => {
             default:
                 // On affiche une erreur et on relance la fonction d'accueil
                 console.log("Wrong choice");
-                accueil();
+                accueil(user);
                 break;
         }
 
     }
     else if (user.type === "professeur") {
+        console.log("=====================================");
         // Afficher le menu
         console.log("1. Créer un QCM");
         console.log("2. Créer une vCard");
         console.log("3. Simulation du passsage d'un test");
-        console.log("4. Se déconnecter");
+        console.log("4. Rechercher des questions")
+        console.log("5. Se déconnecter");
 
         // Demander le choix
         let choice = prompt("Votre choix : ");
@@ -65,6 +71,12 @@ let accueil = (user) => {
                 accueil(user);
                 break;
             case "4":
+                // On lance la fonction pour rechercher des questions
+                searchQ.searchQuestions();
+                accueil(user);
+                break;
+
+            case "5":
                 // On se déconnecte
                 break;
             default:

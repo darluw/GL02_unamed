@@ -201,4 +201,4 @@ function searchQuestions() {
   readKeywords();
   displayMatchingQuestions(keywords);
 }
-searchQuestions();
+module.exports= {searchQuestions};
