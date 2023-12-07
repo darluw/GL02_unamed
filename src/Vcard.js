@@ -36,6 +36,7 @@ function createVCard() {
         myvCard.lastName = prompt('Veuillez entrer un nom valide. Seules les lettres sont acceptées. '.red);
     }
     myvCard.email = prompt('Email : ');
+    myvCard.email = myvCard.email.toLowerCase();
     while (!/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/.test(myvCard.email)) {
         myvCard.email = prompt('Veuillez entrer un email valide. '.red);
     }
