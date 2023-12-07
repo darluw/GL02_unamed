@@ -1,20 +1,81 @@
-const fs = require('fs').promises;
+const fs = require('fs');
 const path = require('path');
-const {accueil} = require("./accueil");
+const { accueil } = require("./accueil");
 const Parser = require("gift-parser-ide").default;
 const folderPath = "../files/";
 const pathFile = "../utils/users.json";
 const prompt = require("prompt-sync")();
 
-const questions = [];
+const questions = [
+    {
+        title: "Question 1",
+        content: "Contenu de la question 1"
+    },
+    {
+        title: "Question 2",
+        content: "Contenu de la question 2"
+    },
+    {
+        title: "Question 3",
+        content: "Contenu de la question 3"
+    },
+    {
+        title: "Question 4",
+        content: "Contenu de la question 4"
+    },
+    {
+        title: "Question 5",
+        content: "Contenu de la question 5"
+    },
+    {
+        title: "Question 6",
+        content: "Contenu de la question 6"
+    },
+    {
+        title: "Question 7",
+        content: "Contenu de la question 7"
+    },
+    {
+        title: "Question 8",
+        content: "Contenu de la question 8"
+    },
+    {
+        title: "Question 9",
+        content: "Contenu de la question 9"
+    },
+    {
+        title: "Question 10",
+        content: "Contenu de la question 10"
+    },
+    {
+        title: "Question 11",
+        content: "Contenu de la question 11"
+    },
+    {
+        title: "Question 12",
+        content: "Contenu de la question 12"
+    },
+    {
+        title: "Question 13",
+        content: "Contenu de la question 13"
+    },
+    {
+        title: "Question 14",
+        content: "Contenu de la question 14"
+    },
+    {
+        title: "Question 15",
+        content: "Contenu de la question 15"
+    }
+]
 
 /**
- * Méthode qui permet gerer le choix de l'utilisateur
+ * Méthode qui permet de gérer le choix de l'utilisateur
  */
-let fileGestion = async () =>{
+function fileGestion() {
     let choix = "0";
     console.log("Bienvenue dans le gestionnaire de fichier");
-    while (choix != "5"){
+    while (choix != "5") {
         console.log("\nVous avez pour l'instant " + questions.length + " questions dans votre examen");
         console.log("Pour générer un examen, vous devez avoir entre 15 et 20 questions");
         console.log("Que voulez-vous faire ?\n");
@@ -25,10 +86,11 @@ let fileGestion = async () =>{
         console.log("5 - Quitter le gestionnaire de fichier");
 
         choix = prompt("Votre choix : ");
-        switch (choix){
+        console.log("Vous avez choisi l'option " + choix);
+        switch (choix) {
             case "1":
                 console.log("Vous avez choisi d'ajouter une question");
-                await choixExamen()
+                choixExamen();
                 break;
             case "2":
                 console.log("Vous avez choisi de supprimer une question");
@@ -40,35 +102,32 @@ let fileGestion = async () =>{
                 break;
             case "4":
                 console.log("Vous avez choisi de générer l'examen");
-                await genererExamen();
-                choix = 5;
+                genererExamen();
+                choix = "5";
                 break;
             case "5":
                 console.log("Vous avez choisi de quitter le gestionnaire de fichier");
                 break;
             default:
                 console.log("Vous n'avez pas choisi une option valide");
-                fileGestion();
+                break;
         }
+        console.log("test");
     }
 }
 
-
 /**
  * Méthode qui permet d'ajouter une question dans le tableau de questions
- * @returns {Promise<void>} - Résolution de la promesse
  */
-async function choixExamen() {
+function choixExamen() {
     try {
-        const files = await fs.readdir(folderPath);
+        const files = fs.readdirSync(folderPath);
 
-        // Afficher les fichiers
-        await affichageDossier(files);
-
+        affichageDossier();
         // Demander à l'utilisateur de choisir un fichier
-        let numFichier = await choixFichier(files); // Attendre la résolution de la promesse
+        let numFichier = choixFichier(files);
         console.log("\nEntree dans le fichier " + files[numFichier - 1]);
-        await entrerDansFichier(files[numFichier - 1]);
+        entrerDansFichier(files[numFichier - 1]);
 
     } catch (err) {
         console.error("Erreur :", err);
@@ -76,19 +135,18 @@ async function choixExamen() {
 }
 
 /**
- * Méthode qui permet d'entrer dans un fichier
- * @returns {Promise<void>} - Résolution de la promesse
+ * Méthode qui permet d'afficher les fichiers du dossier
  */
-let affichageDossier = async () => {
-    const files = await fs.readdir(folderPath);
+function affichageDossier() {
+    const files = fs.readdirSync(folderPath);
     let compteur = 1;
 
     for (const file of files) {
         const filePath = path.join(folderPath, file);
-        const fileContent = await fs.readFile(filePath, 'utf8');
+        const fileContent = fs.readFileSync(filePath, 'utf8');
 
         const parsedPath = path.parse(file);
-        console.log("\n" + compteur + " - " + parsedPath.name+ parsedPath.ext);
+        console.log("\n" + compteur + " - " + parsedPath.name + parsedPath.ext);
         compteur++;
     }
 }
@@ -96,51 +154,48 @@ let affichageDossier = async () => {
 /**
  * Méthode qui permet de choisir un fichier
  * @param files - Fichier choisi par l'utilisateur
- * @returns {Promise<unknown>} - Résolution de la promesse
+ * @returns {number} - Indice du fichier choisi
  */
-async function choixFichier(files) {
-    return new Promise(resolve => {
-        let index = prompt("Numero du fichier à consulter ou (exit) pour revenir en arrière: ");
-        if (index === "exit" || index === "EXIT" || index === "Exit") {
-            console.log("Vous etes sortis de la fonction");
-            fileGestion();
-        } else {
-            let i = parseInt(index);
-            let fichier = files[i - 1];
+function choixFichier(files) {
+    let index = prompt("Numero du fichier à consulter ou (exit) pour revenir en arrière: ");
+    if (index === "exit" || index === "EXIT" || index === "Exit") {
+        console.log("Vous etes sortis de la fonction");
+        fileGestion();
+    } else {
+        let i = parseInt(index);
+        let fichier = files[i - 1];
 
-            if (fichier != null) {
-                resolve(i);// marche pas avec return i (alors que c'est un entier je pense)
-            } else {
-                console.log("Fichier non trouve");
-                let choice = 0;
-                while (choice != "1" && choice != "2") {
-                    choice = prompt("Voulez-vous réessayer ? (1) Réessayer | (2) Exit  :")
-                    switch (choice) {
-                        case "1":
-                            resolve(choixFichier(files)); // Résoudre la promesse récursivement
-                            break;
-                        case "2":
-                            console.log("Vous etes sortis de la fonction");
-                            fileGestion();
-                        default:
-                            console.log("Mauvais choix");
-                    }
+        if (fichier != null) {
+            return i;
+        } else {
+            console.log("Fichier non trouve");
+            let choice = 0;
+            while (choice !== "1" && choice !== "2") {
+                choice = prompt("Voulez-vous réessayer ? (1) Réessayer | (2) Exit  :");
+                switch (choice) {
+                    case "1":
+                        return choixFichier(files);
+                    case "2":
+                        console.log("Vous etes sortis de la fonction");
+                        fileGestion();
+                        break;
+                    default:
+                        console.log("Mauvais choix");
                 }
             }
         }
-    });
+    }
 }
 
 /**
  * Méthode qui permet d'entrer dans un fichier
  * @param selectedFile - Fichier choisi par l'utilisateur
- * @returns {Promise<void>} - Résolution de la promesse
  */
-async function entrerDansFichier(selectedFile) {
+function entrerDansFichier(selectedFile) {
     const filePath = path.join(folderPath, selectedFile); // Utilisation de folderPath
 
     try {
-        const fileContent = await fs.readFile(filePath, 'utf8');
+        const fileContent = fs.readFileSync(filePath, 'utf8');
         const questionsInFile = extractQuestions(fileContent);
         console.log(questionsInFile);
         let index = 1;
@@ -262,7 +317,7 @@ let genererExamen = async () => {
 
     // generer l'examen
     try {
-        await fs.writeFile(filePath, giftContent, 'utf8');
+        fs.writeFileSync(filePath, giftContent, 'utf8');
         console.log(`Fichier GIFT généré avec succès : ${fileNameGift}.gift`);
     } catch (err) {
         console.error("Erreur lors de la génération du fichier :", err);
@@ -303,16 +358,16 @@ let changementIndexQuestion = () => {
  * Méthode qui permet d'afficher les questions du tableau
  */
 let afficherQuestions = () => {
-    questions.forEach((question, index) => {
-        console.log(`${index} --> Titre: ${question.title}`);
-        console.log(`    Contenu: ${question.content}`);
-    });
-
+    if (questions.length === 0) {
+        console.log("Il n'y a aucune question dans le tableau !");
+    }else {
+        questions.forEach((question, index) => {
+            console.log(`${index} --> Titre: ${question.title}`);
+            console.log(`    Contenu: ${question.content}`);
+        });
+    }
 }
 
 module.exports = {fileGestion};
 
 
-//Remarques
-//  - Pourquoi certaines fonctions des let (ça fait deux types différents de questions) ?
-//  - J'ai pas mis de nom au test (première ligne du fichier gift)
