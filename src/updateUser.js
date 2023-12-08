@@ -1,4 +1,4 @@
-
+const colors = require('colors');
 const fs = require('fs');
 
 let updateUser = (user) => {

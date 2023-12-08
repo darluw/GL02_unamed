@@ -3,6 +3,7 @@ const login = require("./login.js");
 const prompt = require("prompt-sync")();
 const {accueil} = require("./accueil.js");
 const {parser} = require("./giftParser.js");
+const colors = require('colors');
 
 
 let app = async () =>{
@@ -27,10 +28,10 @@ let menu =  async () =>{
             login.register();
             break;
         case "3":
-            console.log("Bye bye");
+            console.log("Bye bye".blue);
             break;
         default:
-            console.log("Wrong choice");
+            console.log("Wrong choice".red);
             menu();
             break;
     }

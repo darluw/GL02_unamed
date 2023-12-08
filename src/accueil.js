@@ -4,6 +4,7 @@ const {parser} = require("./giftParser.js");
 const selectQ = require("./selectionQuestions.js")
 const examen = require("./testExamen.js");
 const searchQ = require("./searchQuestions.js");
+const colors = require('colors');
 
 // Fonction qui affiche le menu d'accueil
 let accueil = async (user) => {
@@ -22,8 +23,8 @@ let accueil = async (user) => {
             case "1":
                 // On lance la fonction pour passer un test
                 console.log("Passage de test pour un étudiant");
-                console.log("fonctionnalité non implémentée pour le moment");
-                console("Fonctionnalité non présente dans le cahier des charges");
+                console.log("fonctionnalité non implémentée pour le moment".red);
+                console("Fonctionnalité non présente dans le cahier des charges".red);
                 accueil(user);
                 break;
             case "2":
@@ -31,7 +32,7 @@ let accueil = async (user) => {
                 break;
             default:
                 // On affiche une erreur et on relance la fonction d'accueil
-                console.log("Wrong choice");
+                console.log("Wrong choice".red);
                 accueil(user);
                 break;
         }
@@ -73,10 +74,11 @@ let accueil = async (user) => {
 
             case "5":
                 // On se déconnecte
+                console.log("Bye bye".blue);
                 break;
             default:
                 // On affiche une erreur et on relance la fonction d'accueil
-                console.log("Wrong choice");
+                console.log("Wrong choice".red);
                 accueil(user);
                 break;
         }

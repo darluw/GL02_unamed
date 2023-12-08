@@ -2,6 +2,7 @@ const readline = require("readline");
 const fs = require("fs");
 const path = require("path");
 const prompt = require("prompt-sync")();
+const colors = require('colors');
 
 //filter syntax : [”MC”,”SHORT”,”TF”,”NUM”]
 // true if if you want questions of this type, false else
@@ -80,7 +81,7 @@ function readFilesFromFolder(folderPath) {
 
     return allFileContent;
   } catch (err) {
-    console.error("Error reading folder:", err);
+    console.error(("Error reading folder:", err).red);
     return null;
   }
 }
@@ -150,7 +151,7 @@ function readKeywords() {
       filters.TF === false &&
       filters.NUM === false
     ) {
-      console.log("Please Select at least 1 type of question : ");
+      console.log("Please Select at least 1 type of question : ".red);
       readKeywords();
     } else {
       console.log(

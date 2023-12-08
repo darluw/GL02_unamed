@@ -5,6 +5,7 @@ const prompt = require("prompt-sync")();
 const pathFile = ("../utils/users.json");
 const app = require("./app.js");
 const {updateUser} = require("./updateUser.js");
+const colors = require('colors');
 
 let nomFichierTest;
 
@@ -75,13 +76,13 @@ let testExamen = (jsonExamen, user) =>{
                 let reponse = prompt("Votre réponse : ");
 
                 while(reponse==="" || reponse < 0 || reponse > question.result[0][0]?.choices.length|| isNaN(reponse)){
-                    reponse = prompt("Votre réponse (veuillez choisir l'index !)  : ");
+                    reponse = prompt("Votre réponse (veuillez choisir l'index !)  : ".red);
                 }
                 if(question.result[0][0]?.choices[reponse-1].isCorrect){
                     score++;
-                    console.log("Correct");
+                    console.log("Correct".green);
                 }else{
-                    console.log("Incorrect");
+                    console.log("Incorrect".red);
                 }
                 break;
             case "Numerical":
@@ -89,13 +90,13 @@ let testExamen = (jsonExamen, user) =>{
                 nbQuestions++;
                 let reponseNumerical = prompt("Votre réponse : ");
                 while(reponseNumerical==="" || isNaN(reponseNumerical)){
-                    reponseNumerical = prompt("Votre réponse (un nombre !) : ");
+                    reponseNumerical = prompt("Votre réponse (un nombre !) : ".red);
                 }
                 if(verifierReponseNumerical(question.result[0][0]?.choices, reponseNumerical)){
                     score++;
-                    console.log("Correct");
+                    console.log("Correct".green);
                 }else{
-                    console.log("Incorrect");
+                    console.log("Incorrect".red);
                 }
                 break;
             case "TF":
@@ -103,7 +104,7 @@ let testExamen = (jsonExamen, user) =>{
                 nbQuestions++;
                 let reponseTF = prompt("Votre réponse (true/false) : ");
                 while(reponseTF.toLowerCase() !== "true" && reponseTF.toLowerCase() !== "false"){
-                    reponseTF = prompt("Votre réponse (true/false) : ");
+                    reponseTF = prompt("Votre réponse (true/false) : ".red);
                 }
                 score+=verifierReponseTF(question.result[0][0], reponseTF);
                 break;
@@ -143,7 +144,7 @@ let testExamen = (jsonExamen, user) =>{
                 nbQuestions++;
                 let reponseShort = prompt("Votre réponse : ");
                 while(reponseShort===""){
-                    reponseShort = prompt("Votre réponse : ");
+                    reponseShort = prompt("Votre réponse : ".red);
                 }
                 if(verifierReponseShort(question.result[0][0]?.choices, reponseShort)){score++;}
                 console.log(score);
@@ -152,8 +153,8 @@ let testExamen = (jsonExamen, user) =>{
         }
     });
     if (nbQuestions === 0) {
-        console.log("Aucune question n'a été trouvée dans ce fichier.");
-        console.log("Il semble que le fichier ne soit pas au bon format.");
+        console.log("Aucune question n'a été trouvée dans ce fichier.".red);
+        console.log("Il semble que le fichier ne soit pas au bon format.".red);
         return;
     }
 
@@ -176,7 +177,7 @@ let testExamen = (jsonExamen, user) =>{
 
 
     //afficher le score
-    console.log("Votre score est de : " + score + "/" + nbQuestions);
+    console.log(("Votre score est de : " + score + "/" + nbQuestions).green);
 
 }
 
@@ -220,7 +221,7 @@ let verifierReponseShort = (question, reponse) =>{
     let estCorrect = false;
     question.forEach(mot => {
         if(mot.text.text.toLowerCase() === reponse.toLowerCase()){
-            console.log("Correct");
+            console.log("Correct".green);
             estCorrect = true;
         }
     })

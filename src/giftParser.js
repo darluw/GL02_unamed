@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Parser = require("gift-parser-ide").default;
+const colors = require('colors');
 
 const folderPath = path.join(__dirname, "../files/");
 
@@ -44,7 +45,7 @@ let correctFile = () => {
             fs.writeFileSync(filePath, correctedContent);
         });
     } catch (err) {
-        console.error('Erreur lors de la lecture ou de la correction des fichiers :', err);
+        console.error(('Erreur lors de la lecture ou de la correction des fichiers :', err).red);
         throw err;
     }
 }

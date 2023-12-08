@@ -1,5 +1,5 @@
 
-
+const colors = require('colors');
 const pathFile = "../utils/users.json";
 const fs = require("fs");
 const { accueil } = require("./accueil");
@@ -16,8 +16,8 @@ let login = () => {
     let jsonContent = JSON.parse(jsonData);
     let user = jsonContent.users.find((user) => user.username === username && user.password === password);
     while (!user) {
-        console.log("Wrong username or password");
-        let choice = prompt("Voulez-vous réessayer ou vous inscrire ? (1) Réessayer | (2) S'inscrire | (3) Exit  :")
+        console.log("Wrong username or password".red);
+        let choice = prompt("Voulez-vous réessayer ou vous inscrire ? (1) Réessayer | (2) S'inscrire | (3) Exit  : ".red)
         switch (choice) {
             case "1":
                 console.log("Login : ");
@@ -31,10 +31,11 @@ let login = () => {
                 register();
                 break;
             case "3":
-                console.log("Bye bye");
+                console.log("Bye bye".blue);
+                process.exit();
                 break;
             default:
-                console.log("Wrong choice");
+                console.log("Wrong choice".red);
                 break;
         }
     }

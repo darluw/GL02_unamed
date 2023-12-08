@@ -5,7 +5,7 @@ const giftParser = require("./giftParser");
 const folderPath = "../files/";
 const pathFile = "../utils/users.json";
 const prompt = require("prompt-sync")();
-var colors = require('colors');
+const colors = require('colors');
 const vg = require('vega');
 const vegalite = require('vega-lite');
 
@@ -51,7 +51,7 @@ async function fileGestion() {
                 console.log("Vous avez choisi de quitter le gestionnaire de fichier");
                 break;
             default:
-                console.log("Vous n'avez pas choisi une option valide");
+                console.log("Vous n'avez pas choisi une option valide".red);
                 break;
         }
         console.log("test");
@@ -72,7 +72,7 @@ function choixExamen() {
         entrerDansFichier(files[numFichier - 1]);
 
     } catch (err) {
-        console.error("Erreur :", err);
+        console.error(("Erreur :", err).red);
     }
 }
 
@@ -110,7 +110,7 @@ function choixFichier(files) {
         if (fichier != null) {
             return i;
         } else {
-            console.log("Fichier non trouve");
+            console.log("Fichier non trouve".red);
             let choice = 0;
             while (choice !== "1" && choice !== "2") {
                 choice = prompt("Voulez-vous réessayer ? (1) Réessayer | (2) Exit  :");
@@ -122,7 +122,7 @@ function choixFichier(files) {
                         fileGestion();
                         break;
                     default:
-                        console.log("Mauvais choix");
+                        console.log("Mauvais choix".red);
                 }
             }
         }
@@ -159,7 +159,7 @@ function entrerDansFichier(selectedFile) {
                 for (var j = 0; j < questions.length; j++) {
                     if (questionsInFile[selectedQuestion - 1].title === questions[j]) {
                         trouve = 1;
-                        console.log("\nQuestion deja presente dans la selection");
+                        console.log("\nQuestion deja presente dans la selection".red);
                     }
                 }
                 if (trouve === 0) {
@@ -169,12 +169,12 @@ function entrerDansFichier(selectedFile) {
                 console.log(questions);
 
             } else {
-                console.log("Numéro de question invalide");
+                console.log("Numéro de question invalide".red);
             }
         }
 
     } catch (err) {
-        console.error("Erreur :", err);
+        console.error(("Erreur :", err).red);
     }
 }
 
@@ -194,7 +194,7 @@ let supprimerQuestion = () => {
     } else {
         index = parseInt(index);
         questions.splice(index, 1);
-        console.log("Question supprimée");
+        console.log("Question supprimée".green);
     }
 }
 
@@ -223,18 +223,18 @@ function extractQuestions(fileContent) {
  */
 let genererExamen = async () => {
     if (questions.length < 15) {
-        console.log("Il faut au moins 15 questions pour générer un examen !");
+        console.log("Il faut au moins 15 questions pour générer un examen !".red);
         return;
     }
     if (questions.length > 20) {
-        console.log("Il y a trop de questions pour générer un examen !");
+        console.log("Il y a trop de questions pour générer un examen !".red);
         return;
     }
     // Demander à l'utilisateur s'il veut changer l'index des questions
     let reponse = prompt("Voulez-vous changer l'index des questions dans le tableau ? (Oui/Non)");
 
     while (reponse.toLowerCase() !== 'oui' && reponse.toLowerCase() !== 'non') {
-        console.log("Réponse invalide. Veuillez réessayer.");
+        console.log("Réponse invalide. Veuillez réessayer.".red);
         reponse = prompt("Voulez-vous changer l'index des questions dans le tableau ? (Oui/Non)");
     }
 
@@ -243,7 +243,7 @@ let genererExamen = async () => {
         changementIndexQuestion();
         reponse = prompt("Voulez-vous changer l'index des questions dans le tableau ? (Oui/Non)");
         while (reponse.toLowerCase() !== 'oui' && reponse.toLowerCase() !== 'non') {
-            console.log("Réponse invalide. Veuillez réessayer.");
+            console.log("Réponse invalide. Veuillez réessayer.".red);
             reponse = prompt("Voulez-vous changer l'index des questions dans le tableau ? (Oui/Non)");
         }
     }
@@ -350,7 +350,7 @@ let genererExamen = async () => {
         view.finalize();
         console.log("Chart output : ../charts/" + fileNameGift + ".svg");
     } catch (err) {
-        console.error("Error generating chart: ", err);
+        console.error(("Error generating chart: ", err).red);
     }
 
 }
@@ -365,7 +365,7 @@ let changementIndexQuestion = () => {
     //on demande a l'utilisateur de choisir la question a deplacer
     let anciennePosition = parseInt(prompt("l'index de la question que vous voulez deplacer :"));
     while (isNaN(anciennePosition) || anciennePosition < 0 || anciennePosition >= questions.length) {
-        console.log("Index invalide. Veuillez réessayer.");
+        console.log("Index invalide. Veuillez réessayer.".red);
         anciennePosition = parseInt(prompt("l'index de la question que vous voulez deplacer :"));
     }
 
@@ -373,13 +373,13 @@ let changementIndexQuestion = () => {
     let nouvellePosition = parseInt(prompt("Entrez la nouvelle position de la question dans le tableau :"));
 
     while (isNaN(nouvellePosition) || nouvellePosition < 0 || nouvellePosition >= questions.length) {
-        console.log("Index invalide. Veuillez réessayer.");
+        console.log("Index invalide. Veuillez réessayer.".red);
         nouvellePosition = parseInt(prompt("Entrez la nouvelle position de la question dans le tableau :"));
     }
 
     //on deplace la question a la nouvelle position
     questions.splice(nouvellePosition, 0, questions.splice(anciennePosition, 1)[0]);
-    console.log("Question déplacée avec succès !");
+    console.log("Question déplacée avec succès !".green);
     //on re affiche les questions
     afficherQuestions();
 }
@@ -389,7 +389,7 @@ let changementIndexQuestion = () => {
  */
 let afficherQuestions = () => {
     if (questions.length === 0) {
-        console.log("Il n'y a aucune question dans le tableau !");
+        console.log("Il n'y a aucune question dans le tableau !".red);
     } else {
         questions.forEach((question, index) => {
             console.log(`${index} --> Titre: ${question.title}`);
