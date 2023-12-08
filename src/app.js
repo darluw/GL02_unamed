@@ -1,7 +1,7 @@
 const fs = require('fs');
 const login = require("./login.js");
 const prompt = require("prompt-sync")();
-const accueil = require("./accueil.js");
+const {accueil} = require("./accueil.js");
 const {parser} = require("./giftParser.js");
 
 
@@ -9,11 +9,6 @@ let app = async () =>{
     parser();
     await menu();
 }
-
-
-
-
-
 
 let menu =  async () =>{
     console.log("=====================================");
@@ -26,7 +21,7 @@ let menu =  async () =>{
     switch (choice){
         case "1":
             let user = login.login();
-            await accueil.accueil(user);
+            await accueil(user);
             break;
         case "2":
             login.register();

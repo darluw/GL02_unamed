@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { accueil } = require("./accueil");
 const Parser = require("gift-parser-ide").default;
 const giftParser = require("./giftParser");
 const folderPath = "../files/";
