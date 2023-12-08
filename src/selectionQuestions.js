@@ -9,74 +9,7 @@ var colors = require('colors');
 const vg = require('vega');
 const vegalite = require('vega-lite');
 
-const questions = [{
-    title: 'U7 p77 [Key word transformation] 6.4',
-    content: '[html]I had a wonderful time and I really enjoyed seeing everyone again.<br>\n' +
-        '<b>GREAT</b><br>\n' +
-        'I had a wonderful time and {=it was great to see} everyone again.'
-},
-{
-    title: 'U8 p84 Voc Linking words 5.8',
-    content: 'I enjoyed my time at the law firm. I made a lot of friends there {=too.}.'
-},
-{
-    title: 'U7 p77 [It/There is] GR+.8',
-    content: "{~It =There} isn't any time to have a quick coffee first."
-},
-{
-    title: 'U7 p76 5 Relative clauses – Open writing',
-    content: '[html]Describe a popular place in your country and why people go there. Use the phrases below.<br>\n' +
-        "<i>It's a place which…</i><br>\n" +
-        "<i>It's somewhere that…</i><br>\n" +
-        '<i>The people who live there…</i><br>\n' +
-        '<i>One reason why people like it is…</i><br>{}'
-},
-{
-    title: 'U7 p77 [So,such,too,enough,very] 1.4',
-    content: "There aren't {~enough~so~such~too=very} many people who could do that."
-},
-{
-    title: 'EM U5 p35 Gra3.4',
-    content: 'There {~was=were} few people in the restaurant.'
-},
-{
-    title: 'U1 p10 GR2.3 Present tenses & habits',
-    content: "I think she {=is being ='s being} a bit unfair – he didn't mean to upset her. (<i>be</i>)"
-},
-{
-    title: 'U6 p63 Reading Voc8.1',
-    content: "[html]I don't always feel very {=hopeful} (<i>hope</i>) about the impact of technology on our lives."
-},
-{
-    title: 'U9 p95 4.3 Third conditional',
-    content: '[html]\n' +
-        '<b>A:</b> We set off a bit late and got held up in the traffic. (<i>leave earlier</i>) <br>\n' +
-        '<b>B:</b> If you ____ in the traffic.{}'
-},
-{
-    title: 'U7 p76 GR2.0 Relative clauses',
-    content: 'Complete the sentences with the words in the box. You can use the words more than once.'
-},
-{
-    title: 'U7 p76 GR2.1 Relative clauses',
-    content: 'The letter is in the file {~when=where~whom~whose~why} I keep my bills.'
-},
-{
-    title: 'U7 p76 GR2.2 Relative clauses',
-    content: "It wasn't clear {~when~where~whom~whose=why} the children had stayed at home."
-},
-{
-    title: 'U7 p76 GR2.3 Relative clauses',
-    content: 'The lawyer from {~when~where=whom~whose~why} we had received the advice was well known.'
-},
-{
-    title: 'U7 p76 GR2.4 Relative clauses',
-    content: 'Please give Luke this message at any point {=when~where~whom~whose~why} it is convenient.'
-},
-{
-    title: 'U7 p76 GR2.5 Relative clauses',
-    content: 'The old men directed us to a small hotel, {~when=where~whom~whose~why} we spent the night.'
-}];
+const questions = [];
 
 /**
  * Méthode qui permet de gérer le choix de l'utilisateur
