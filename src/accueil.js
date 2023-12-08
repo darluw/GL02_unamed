@@ -10,7 +10,7 @@ const examen = require("./testExamen.js");
 const searchQ = require("./searchQuestions.js");
 
 // Fonction qui affiche le menu d'accueil
-let accueil = (user) => {
+let accueil = async (user) => {
     parser();
 
 
@@ -56,7 +56,7 @@ let accueil = (user) => {
         switch (choice) {
             case "1":
                 // On lance la fonction pour créer un QCM
-                selectQ.fileGestion()
+                await selectQ.fileGestion()
                 accueil(user);
                 break;
             case "2":
@@ -66,7 +66,6 @@ let accueil = (user) => {
                 break;
             case "3":
                 // On lance la fonction pour le passage d'un test
-
                 examen.chargerExamen(user);
                 accueil(user);
                 break;

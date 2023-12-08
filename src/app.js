@@ -5,9 +5,9 @@ const accueil = require("./accueil.js");
 const {parser} = require("./giftParser.js");
 
 
-let app = () =>{
+let app = async () =>{
     parser();
-    menu();
+    await menu();
 }
 
 
@@ -15,7 +15,7 @@ let app = () =>{
 
 
 
-let menu =  () =>{
+let menu =  async () =>{
     console.log("=====================================");
     console.log("| Bienvenue dans le gestionnaire de QCM |");
     console.log("=====================================");
@@ -26,7 +26,7 @@ let menu =  () =>{
     switch (choice){
         case "1":
             let user = login.login();
-            accueil.accueil(user);
+            await accueil.accueil(user);
             break;
         case "2":
             login.register();
@@ -40,4 +40,5 @@ let menu =  () =>{
             break;
     }
 }
+
 app();

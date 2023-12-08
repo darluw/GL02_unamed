@@ -2,16 +2,87 @@ const fs = require('fs');
 const path = require('path');
 const { accueil } = require("./accueil");
 const Parser = require("gift-parser-ide").default;
+const giftParser = require("./giftParser");
 const folderPath = "../files/";
 const pathFile = "../utils/users.json";
 const prompt = require("prompt-sync")();
+var colors = require('colors');
+const vg = require('vega');
+const vegalite = require('vega-lite');
 
-const questions = [];
+const questions = [{
+    title: 'U7 p77 [Key word transformation] 6.4',
+    content: '[html]I had a wonderful time and I really enjoyed seeing everyone again.<br>\n' +
+        '<b>GREAT</b><br>\n' +
+        'I had a wonderful time and {=it was great to see} everyone again.'
+},
+{
+    title: 'U8 p84 Voc Linking words 5.8',
+    content: 'I enjoyed my time at the law firm. I made a lot of friends there {=too.}.'
+},
+{
+    title: 'U7 p77 [It/There is] GR+.8',
+    content: "{~It =There} isn't any time to have a quick coffee first."
+},
+{
+    title: 'U7 p76 5 Relative clauses – Open writing',
+    content: '[html]Describe a popular place in your country and why people go there. Use the phrases below.<br>\n' +
+        "<i>It's a place which…</i><br>\n" +
+        "<i>It's somewhere that…</i><br>\n" +
+        '<i>The people who live there…</i><br>\n' +
+        '<i>One reason why people like it is…</i><br>{}'
+},
+{
+    title: 'U7 p77 [So,such,too,enough,very] 1.4',
+    content: "There aren't {~enough~so~such~too=very} many people who could do that."
+},
+{
+    title: 'EM U5 p35 Gra3.4',
+    content: 'There {~was=were} few people in the restaurant.'
+},
+{
+    title: 'U1 p10 GR2.3 Present tenses & habits',
+    content: "I think she {=is being ='s being} a bit unfair – he didn't mean to upset her. (<i>be</i>)"
+},
+{
+    title: 'U6 p63 Reading Voc8.1',
+    content: "[html]I don't always feel very {=hopeful} (<i>hope</i>) about the impact of technology on our lives."
+},
+{
+    title: 'U9 p95 4.3 Third conditional',
+    content: '[html]\n' +
+        '<b>A:</b> We set off a bit late and got held up in the traffic. (<i>leave earlier</i>) <br>\n' +
+        '<b>B:</b> If you ____ in the traffic.{}'
+},
+{
+    title: 'U7 p76 GR2.0 Relative clauses',
+    content: 'Complete the sentences with the words in the box. You can use the words more than once.'
+},
+{
+    title: 'U7 p76 GR2.1 Relative clauses',
+    content: 'The letter is in the file {~when=where~whom~whose~why} I keep my bills.'
+},
+{
+    title: 'U7 p76 GR2.2 Relative clauses',
+    content: "It wasn't clear {~when~where~whom~whose=why} the children had stayed at home."
+},
+{
+    title: 'U7 p76 GR2.3 Relative clauses',
+    content: 'The lawyer from {~when~where=whom~whose~why} we had received the advice was well known.'
+},
+{
+    title: 'U7 p76 GR2.4 Relative clauses',
+    content: 'Please give Luke this message at any point {=when~where~whom~whose~why} it is convenient.'
+},
+{
+    title: 'U7 p76 GR2.5 Relative clauses',
+    content: 'The old men directed us to a small hotel, {~when=where~whom~whose~why} we spent the night.'
+}];
 
 /**
  * Méthode qui permet de gérer le choix de l'utilisateur
  */
-function fileGestion() {
+async function fileGestion() {
     let choix = "0";
     console.log("Bienvenue dans le gestionnaire de fichier");
     while (choix != "5") {
@@ -41,7 +112,7 @@ function fileGestion() {
                 break;
             case "4":
                 console.log("Vous avez choisi de générer l'examen");
-                genererExamen();
+                await genererExamen();
                 choix = "5";
                 break;
             case "5":
@@ -145,7 +216,7 @@ function entrerDansFichier(selectedFile) {
         });
 
         let fin = 0;
-        while(fin ===0){
+        while (fin === 0) {
             let selectedQuestion = prompt("Choisissez le numéro de la question à intégrer: ");
             selectedQuestion = parseInt(selectedQuestion);
             console.log("Selected question = " + selectedQuestion);
@@ -181,11 +252,11 @@ function entrerDansFichier(selectedFile) {
 let supprimerQuestion = () => {
     //afficher les questions du tableau
     afficherQuestions();
-    let index="-1";
-    while((parseInt(index) < 0 || parseInt(index) > questions.length) && (index != "exit" || index != "EXIT" || index != "Exit")){
+    let index = "-1";
+    while ((parseInt(index) < 0 || parseInt(index) > questions.length) && (index != "exit" || index != "EXIT" || index != "Exit")) {
         index = prompt("Numéro de la question à supprimer (exit) pour revenir en arrière : ");
     }
-    if (index === "exit" || index === "EXIT" || index === "Exit"){
+    if (index === "exit" || index === "EXIT" || index === "Exit") {
         console.log("Vous etes sortis de la fonction");
         return;
     } else {
@@ -244,7 +315,7 @@ let genererExamen = async () => {
             reponse = prompt("Voulez-vous changer l'index des questions dans le tableau ? (Oui/Non)");
         }
     }
-    
+
     // Écrire le contenu GIFT dans un fichier
     const fileNameGift = prompt("Entrez le nom du fichier à générer : ");
     const filePath = path.join(folderPath, fileNameGift + ".gift");
@@ -259,7 +330,95 @@ let genererExamen = async () => {
         fs.writeFileSync(filePath, giftContent, 'utf8');
         console.log(`Fichier GIFT généré avec succès : ${fileNameGift}.gift`);
     } catch (err) {
-        console.error("Erreur lors de la génération du fichier :", err);
+        console.error(("Erreur lors du parsage du fichier :", err).red);
+    }
+
+    let jsonExamen;
+
+    //parser le nouveau examen
+    try {
+        giftParser.parser();
+        let examen = fs.readFileSync("../jsonResult/" + fileNameGift + ".gift.json");
+        //convert to JSON
+        jsonExamen = JSON.parse(examen);
+    } catch (err) {
+        console.error("Erreur lors de la génération du graphique".red);
+    }
+
+
+    //compter combien de questions de chaque type
+    let nbQuestionType = [];
+    jsonExamen.forEach((question) => {
+        if (question.result[0]) {
+            if (nbQuestionType.some(e => e.name === question.result[0][0].type)) {
+                nbQuestionType.forEach((element) => {
+                    if (element.name === question.result[0][0].type) {
+                        element.nbQuestion++;
+                    }
+                });
+            } else {
+                nbQuestionType.push({ name: question.result[0][0].type, nbQuestion: 1 });
+            }
+        } else {
+            if (nbQuestionType.some(e => e.name === "null")) {
+                nbQuestionType.forEach((element) => {
+                    if (element.name === "") {
+                        element.nbQuestion++;
+                    }
+                });
+            } else {
+                nbQuestionType.push({ name: "null", nbQuestion: 1 });
+            }
+        }
+    });
+
+    //generer le graphique
+    var avgChart = {
+        "width": 320,
+        "height": 460,
+        "data": {
+            "values": nbQuestionType
+        },
+        "mark": "bar",
+        "title": "Examen : " + fileNameGift,
+        "encoding": {
+            "x": {
+                "field": "name", "type": "nominal",
+                "axis": { "title": "Type of questions" }
+            },
+            "y": {
+                "field": "nbQuestion", "type": "quantitative",
+                "axis": { "title": "Count" }
+            }
+        }
+    }
+
+
+
+    const myChart = vegalite.compile(avgChart).spec;
+
+    /* SVG version */
+    var runtime = vg.parse(myChart);
+    var view = new vg.View(runtime).renderer('svg').run();
+    var mySvg = view.toSVG();
+
+    try {
+        var res = await mySvg;
+
+        //créer le dossier pour le graphique
+        // Définir le chemin du dossier et du fichier
+        var dirPath = path.join(__dirname, '../charts');
+        var chartPath = path.join(dirPath, fileNameGift + '.svg');
+
+        // Créer le dossier s'il n'existe pas
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath);
+        }
+        fs.writeFileSync(chartPath, res)
+        view.finalize();
+        console.log("Chart output : ../charts/" + fileNameGift + ".svg");
+    } catch (err) {
+        console.error("Error generating chart: ", err);
     }
 
 }
@@ -299,7 +458,7 @@ let changementIndexQuestion = () => {
 let afficherQuestions = () => {
     if (questions.length === 0) {
         console.log("Il n'y a aucune question dans le tableau !");
-    }else {
+    } else {
         questions.forEach((question, index) => {
             console.log(`${index} --> Titre: ${question.title}`);
             console.log(`    Contenu: ${question.content}`);
@@ -307,6 +466,5 @@ let afficherQuestions = () => {
     }
 }
 
-module.exports = {fileGestion};
-
+module.exports = { fileGestion };
 
