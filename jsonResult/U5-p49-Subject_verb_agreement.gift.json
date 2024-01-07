@@ -1,0 +1,522 @@
+[
+  {
+    "location": {
+      "start": 4,
+      "end": 4,
+      "text": "::U5 p49 GR2.0::Complete the sentences with <i>is</i> or <i>are</i>."
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": "U5 p49 GR2.0",
+          "stem": {
+            "format": "moodle",
+            "text": "Complete the sentences with <i>is</i> or <i>are</i>."
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 6,
+      "end": 6,
+      "text": "::U5 p49 GR2.1::The first few weeks {=are} the most difficult."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U5 p49 GR2.1",
+          "stem": {
+            "format": "moodle",
+            "text": "The first few weeks _____ the most difficult."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "are"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 8,
+      "end": 8,
+      "text": "::U5 p49 GR2.2::Hardly any of the roses in the garden {=are} blooming."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U5 p49 GR2.2",
+          "stem": {
+            "format": "moodle",
+            "text": "Hardly any of the roses in the garden _____ blooming."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "are"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 10,
+      "end": 10,
+      "text": "::U5 p49 GR2.3::Only a bit of the orange juice I bought for the children {=is} left."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U5 p49 GR2.3",
+          "stem": {
+            "format": "moodle",
+            "text": "Only a bit of the orange juice I bought for the children _____ left."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "is"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 12,
+      "end": 12,
+      "text": "::U5 p49 GR2.4::There {=are} hardly any chocolates left in the box."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U5 p49 GR2.4",
+          "stem": {
+            "format": "moodle",
+            "text": "There _____ hardly any chocolates left in the box."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "are"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 14,
+      "end": 14,
+      "text": "::U5 p49 GR2.5::Very few of the players in that team {=are} any good."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U5 p49 GR2.5",
+          "stem": {
+            "format": "moodle",
+            "text": "Very few of the players in that team _____ any good."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "are"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 16,
+      "end": 16,
+      "text": "::U5 p49 GR2.6::There {=is} not much useful information in any of those books."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U5 p49 GR2.6",
+          "stem": {
+            "format": "moodle",
+            "text": "There _____ not much useful information in any of those books."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "is"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 20,
+      "end": 20,
+      "text": "::U5 p49 11.0 Subject-verb agreement::Choose the correct option."
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": "U5 p49 11.0 Subject-verb agreement",
+          "stem": {
+            "format": "moodle",
+            "text": "Choose the correct option."
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 22,
+      "end": 22,
+      "text": "::U5 p49 11.1::Not many people {=like~likes} raw fish."
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U5 p49 11.1",
+          "stem": {
+            "format": "moodle",
+            "text": "Not many people _____ raw fish."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "like"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "likes"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 24,
+      "end": 24,
+      "text": "::U5 p49 11.2::Two thousand five hundred calories per day {=is~are} enough for the average man."
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U5 p49 11.2",
+          "stem": {
+            "format": "moodle",
+            "text": "Two thousand five hundred calories per day _____ enough for the average man."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "is"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "are"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 26,
+      "end": 26,
+      "text": "::U5 p49 11.3::Everyone {~need=needs} to eat a balanced diet."
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U5 p49 11.3",
+          "stem": {
+            "format": "moodle",
+            "text": "Everyone _____ to eat a balanced diet."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "need"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "needs"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 28,
+      "end": 28,
+      "text": "::U5 p49 11.4::Eating a lot of fresh vegetables and cheese {=is~are} good for you."
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U5 p49 11.4",
+          "stem": {
+            "format": "moodle",
+            "text": "Eating a lot of fresh vegetables and cheese _____ good for you."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "is"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "are"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 30,
+      "end": 30,
+      "text": "::U5 p49 11.5::There {=is~are} a lot of advice on the internet about eating a healthy diet."
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U5 p49 11.5",
+          "stem": {
+            "format": "moodle",
+            "text": "There _____ a lot of advice on the internet about eating a healthy diet."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "is"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "are"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 32,
+      "end": 32,
+      "text": "::U5 p49 11.6::Most of my family {=eat=eats} meat but I'm a vegetarian."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U5 p49 11.6",
+          "stem": {
+            "format": "moodle",
+            "text": "Most of my family _____ meat but I'm a vegetarian."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "eat"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "eats"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  }
+]

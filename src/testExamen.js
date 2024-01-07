@@ -23,26 +23,35 @@ let affichageDossier = () => {
 /**
  * Permet de charger ke fichier JSON contenant les questions et les réponses
  */
-let chargerExamen = (user) =>{
+ 
+//Ajout du retour en arrière a cet endroit:
+let chargerExamen = (user) => {
     let jsonExamen;
     affichageDossier();
     const files = fs.readdirSync("../jsonResult");
 
-    let choix = prompt("Votre choix : ");
-    while(choix < 0 || choix > files.length || isNaN(choix)){
-        choix = prompt("Votre choix : ");
-    }
-    
-    let file = files[choix-1];
+    let choix;
+    do {
+        choix = prompt("Votre choix (ou 'q' pour retourner en arrière) : ");
+
+        if (choix.toLowerCase() === 'q') {
+          
+            console.log("Retour en arrière...");
+            return;
+        }
+
+        choix = parseInt(choix);
+
+    } while (choix < 1 || choix > files.length || isNaN(choix));
+
+    let file = files[choix - 1];
     console.log(file);
-
-
 
     // Charger le fichier JSON
     let data = fs.readFileSync(`../jsonResult/${file}`, "utf8");
     jsonExamen = JSON.parse(data);
     nomFichierTest = file;
-    //commencer le test
+    // Commencer le test
     testExamen(jsonExamen, user);
 }
 
