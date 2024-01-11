@@ -174,12 +174,12 @@
           "found": "{",
           "location": {
             "start": {
-              "offset": 72,
+              "offset": 74,
               "line": 10,
               "column": 72
             },
             "end": {
-              "offset": 73,
+              "offset": 75,
               "line": 10,
               "column": 73
             }
@@ -197,12 +197,12 @@
           "found": "~",
           "location": {
             "start": {
-              "offset": 73,
+              "offset": 75,
               "line": 10,
               "column": 73
             },
             "end": {
-              "offset": 74,
+              "offset": 76,
               "line": 10,
               "column": 74
             }
@@ -220,12 +220,12 @@
           "found": "=",
           "location": {
             "start": {
-              "offset": 78,
+              "offset": 80,
               "line": 10,
               "column": 78
             },
             "end": {
-              "offset": 79,
+              "offset": 81,
               "line": 10,
               "column": 79
             }
@@ -243,12 +243,12 @@
           "found": "}",
           "location": {
             "start": {
-              "offset": 83,
+              "offset": 85,
               "line": 10,
               "column": 83
             },
             "end": {
-              "offset": 84,
+              "offset": 86,
               "line": 10,
               "column": 84
             }

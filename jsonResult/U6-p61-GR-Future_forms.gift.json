@@ -249,12 +249,12 @@
           "found": "[",
           "location": {
             "start": {
-              "offset": 31,
+              "offset": 33,
               "line": 14,
               "column": 31
             },
             "end": {
-              "offset": 32,
+              "offset": 34,
               "line": 14,
               "column": 32
             }

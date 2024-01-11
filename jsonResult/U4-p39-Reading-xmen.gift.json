@@ -36,12 +36,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 59,
+              "offset": 61,
               "line": 5,
               "column": 59
             },
             "end": {
-              "offset": 60,
+              "offset": 62,
               "line": 5,
               "column": 60
             }
@@ -60,12 +60,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 877,
+              "offset": 879,
               "line": 8,
               "column": 506
             },
             "end": {
-              "offset": 878,
+              "offset": 880,
               "line": 8,
               "column": 507
             }
@@ -84,12 +84,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 1560,
+              "offset": 1562,
               "line": 10,
               "column": 69
             },
             "end": {
-              "offset": 1561,
+              "offset": 1563,
               "line": 10,
               "column": 70
             }
@@ -108,12 +108,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 2632,
+              "offset": 2634,
               "line": 12,
               "column": 209
             },
             "end": {
-              "offset": 2633,
+              "offset": 2635,
               "line": 12,
               "column": 210
             }
