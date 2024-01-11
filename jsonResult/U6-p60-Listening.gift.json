@@ -1,0 +1,498 @@
+[
+  {
+    "location": {
+      "start": 1,
+      "end": 2,
+      "text": "::U6 p60 Listening Audio1::You will hear people talking in eight different situations. First, identify the key words in the question below. Then listen and choose the best answer.\nhttps://serge.bibauw.be/teaching/english5/gold_b2_cb_18_u6_p60_listening.mp3"
+    },
+    "result": [
+      null,
+      [
+        {
+          "message": "Expected \"{\" but \":\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "{",
+              "ignoreCase": false
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 185,
+              "line": 2,
+              "column": 6
+            },
+            "end": {
+              "offset": 186,
+              "line": 2,
+              "column": 7
+            }
+          },
+          "name": "SyntaxError"
+        }
+      ]
+    ]
+  },
+  {
+    "location": {
+      "start": 4,
+      "end": 8,
+      "text": "::U6 p60 Listening 1.1::You hear a woman talking about a play. What did she dislike about it?{\n  =the lighting\n  ~the music\n  ~the costumes\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U6 p60 Listening 1.1",
+          "stem": {
+            "format": "moodle",
+            "text": "You hear a woman talking about a play. What did she dislike about it?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "the lighting"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "the music"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "the costumes"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 10,
+      "end": 11,
+      "text": "::U6 p60 Listening Audio2::Identify the key words in the following questions. Then listen and choose the best answer.\nhttps://serge.bibauw.be/teaching/english5/gold_b2_cb_19_u6_p60_listening.mp3"
+    },
+    "result": [
+      null,
+      [
+        {
+          "message": "Expected \"{\" but \":\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "{",
+              "ignoreCase": false
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 124,
+              "line": 11,
+              "column": 6
+            },
+            "end": {
+              "offset": 125,
+              "line": 11,
+              "column": 7
+            }
+          },
+          "name": "SyntaxError"
+        }
+      ]
+    ]
+  },
+  {
+    "location": {
+      "start": 13,
+      "end": 17,
+      "text": "::U6 p60 Listening 3.2::You hear a man and a woman talking about a visit to the theatre. How does the woman feel about the arrangements? {\n  ~annoyed that the play finishes so late\n  =worried about when they’re going to eat\n  ~confused about what time the play starts\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U6 p60 Listening 3.2",
+          "stem": {
+            "format": "moodle",
+            "text": "You hear a man and a woman talking about a visit to the theatre. How does the woman feel about the arrangements?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "annoyed that the play finishes so late"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "worried about when they’re going to eat"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "confused about what time the play starts"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 19,
+      "end": 23,
+      "text": "::U6 p60 Listening 3.3::You hear part of a radio programme. What kind of programme is it? {\n  ~a celebrity interview\n  ~a film review\n  =a news show\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U6 p60 Listening 3.3",
+          "stem": {
+            "format": "moodle",
+            "text": "You hear part of a radio programme. What kind of programme is it?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "a celebrity interview"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "a film review"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "a news show"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 25,
+      "end": 29,
+      "text": "::U6 p60 Listening 3.4::You hear a woman giving some information on the radio about a comedy festival. Why is it going to be different this year? {\n  ~The tickets will be more expensive.\n  ~It will be held in a smaller venue.\n  =It will be on different dates.\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U6 p60 Listening 3.4",
+          "stem": {
+            "format": "moodle",
+            "text": "You hear a woman giving some information on the radio about a comedy festival. Why is it going to be different this year?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "The tickets will be more expensive."
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "It will be held in a smaller venue."
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "It will be on different dates."
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 31,
+      "end": 35,
+      "text": "::U6 p60 Listening 3.5::You hear a man interviewing a ballet dancer on the radio. Why has she decided to retire later this year? {\n  ~She is worried about getting injured.\n  ~She no longer enjoys performing.\n  =She wants to make her family the priority.\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U6 p60 Listening 3.5",
+          "stem": {
+            "format": "moodle",
+            "text": "You hear a man interviewing a ballet dancer on the radio. Why has she decided to retire later this year?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "She is worried about getting injured."
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "She no longer enjoys performing."
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "She wants to make her family the priority."
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 37,
+      "end": 41,
+      "text": "::U6 p60 Listening 3.6::You hear a man and a woman talking on the radio about a new art exhibition. What do they agree is special about it? {\n  =the variety of genres\n  ~the unusual location\n  ~the famous artists\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U6 p60 Listening 3.6",
+          "stem": {
+            "format": "moodle",
+            "text": "You hear a man and a woman talking on the radio about a new art exhibition. What do they agree is special about it?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "the variety of genres"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "the unusual location"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "the famous artists"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 43,
+      "end": 47,
+      "text": "::U6 p60 Listening 3.7::You hear an actress being interviewed on the radio. What is she doing? {\n  =giving her opinion about the topic of the play\n  ~describing her relationship with the director\n  ~stating a wish to direct a play herself\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U6 p60 Listening 3.7",
+          "stem": {
+            "format": "moodle",
+            "text": "You hear an actress being interviewed on the radio. What is she doing?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "giving her opinion about the topic of the play"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "describing her relationship with the director"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "stating a wish to direct a play herself"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 49,
+      "end": 53,
+      "text": "::U6 p60 Listening 3.8::You hear a man and a woman talking. Who is the man? {\n  ~her brother\n  ~her teacher\n  =her friend\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "U6 p60 Listening 3.8",
+          "stem": {
+            "format": "moodle",
+            "text": "You hear a man and a woman talking. Who is the man?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "her brother"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "her teacher"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "her friend"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  }
+]
