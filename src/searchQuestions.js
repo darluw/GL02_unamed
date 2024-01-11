@@ -143,7 +143,7 @@ function readKeywords() {
       filters.SHORT ? "On " : "Off"
     } TF=${filters.TF ? "On " : "Off"} NUM=${filters.NUM ? "On " : "Off"}`,
   );
-  let userInput = prompt("Enter a keyword or '/' to escape : ");
+  let userInput = prompt("Enter a keyword, 'RESET', or '/' to escape : ");
   if (userInput === "/") {
     if (
       filters.MC === false &&
@@ -189,7 +189,11 @@ function readKeywords() {
     } else {
       filters.NUM = false;
       readKeywords();
-    }
+    } } else if (userInput.toUpperCase() === "RESET") {
+      // Reset the keywords array
+      keywords = [];
+      console.log("Keywords have been cleared.");
+      readKeywords(); // Recursive call to continue reading keywords
   } else {
     keywords.push(userInput);
     readKeywords();
