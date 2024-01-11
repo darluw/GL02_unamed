@@ -20,12 +20,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 315,
+              "offset": 317,
               "line": 3,
               "column": 11
             },
             "end": {
-              "offset": 316,
+              "offset": 318,
               "line": 3,
               "column": 12
             }

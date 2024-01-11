@@ -36,12 +36,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 270,
+              "offset": 272,
               "line": 4,
               "column": 16
             },
             "end": {
-              "offset": 271,
+              "offset": 273,
               "line": 4,
               "column": 17
             }

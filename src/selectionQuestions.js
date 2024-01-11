@@ -134,14 +134,15 @@ function choixFichier(files) {
  * @param selectedFile - Fichier choisi par l'utilisateur
  */
 function entrerDansFichier(selectedFile) {
-    const filePath = path.join(folderPath, selectedFile); // Utilisation de folderPath
+    const filePath = path.join(folderPath, selectedFile);
 
     try {
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const questionsInFile = extractQuestions(fileContent);
         console.log(questionsInFile);
         let index = 1;
-        questionsInFile.forEach(question => {//Affichage du titre et du contenu
+
+        questionsInFile.forEach(question => {
             console.log(`${index} - Titre: ${question.title}`);
             console.log(`    Contenu: ${question.content}`);
             index++;
@@ -154,29 +155,30 @@ function entrerDansFichier(selectedFile) {
             console.log("Selected question = " + selectedQuestion);
 
             if (selectedQuestion > 0 && selectedQuestion <= questionsInFile.length) {
+                const selectedTitle = questionsInFile[selectedQuestion - 1].title;
 
-                trouve = 0;
-                for (var j = 0; j < questions.length; j++) {
-                    if (questionsInFile[selectedQuestion - 1].title === questions[j]) {
-                        trouve = 1;
-                        console.log("\nQuestion deja presente dans la selection".red);
-                    }
-                }
-                if (trouve === 0) {
-                    questions.push({ title: questionsInFile[selectedQuestion - 1].title, content: questionsInFile[selectedQuestion - 1].content });
+                // Vérifier si la question est déjà présente dans le tableau
+                const existingQuestion = questions.find(q => q.title === selectedTitle);
+
+                if (existingQuestion) {
+                    console.log("\nQuestion déjà présente dans la sélection".red);
+                } else {
+                    // Ajouter la question uniquement si elle n'est pas déjà dans le tableau
+                    questions.push({ title: selectedTitle, content: questionsInFile[selectedQuestion - 1].content });
                     fin = 1;
+                    console.log(questions);
                 }
-                console.log(questions);
-
             } else {
                 console.log("Numéro de question invalide".red);
             }
         }
-
     } catch (err) {
         console.error(("Erreur :", err).red);
     }
 }
+
+
+
 
 /**
  * Méthode qui permet de supprimer une question dans le tableau de questions

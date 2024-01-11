@@ -40,12 +40,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 1,
+              "offset": 3,
               "line": 3,
               "column": 1
             },
             "end": {
-              "offset": 2,
+              "offset": 4,
               "line": 3,
               "column": 2
             }
@@ -64,12 +64,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 2,
+              "offset": 4,
               "line": 3,
               "column": 2
             },
             "end": {
-              "offset": 3,
+              "offset": 5,
               "line": 3,
               "column": 3
             }
@@ -88,12 +88,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 24,
+              "offset": 26,
               "line": 3,
               "column": 24
             },
             "end": {
-              "offset": 25,
+              "offset": 27,
               "line": 3,
               "column": 25
             }
@@ -112,12 +112,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 47,
+              "offset": 49,
               "line": 3,
               "column": 47
             },
             "end": {
-              "offset": 48,
+              "offset": 50,
               "line": 3,
               "column": 48
             }
@@ -136,12 +136,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 48,
+              "offset": 50,
               "line": 3,
               "column": 48
             },
             "end": {
-              "offset": 49,
+              "offset": 51,
               "line": 3,
               "column": 49
             }
@@ -160,12 +160,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 82,
+              "offset": 84,
               "line": 3,
               "column": 82
             },
             "end": {
-              "offset": 83,
+              "offset": 85,
               "line": 3,
               "column": 83
             }
@@ -184,12 +184,12 @@
           "found": ":",
           "location": {
             "start": {
-              "offset": 297,
+              "offset": 299,
               "line": 4,
               "column": 163
             },
             "end": {
-              "offset": 298,
+              "offset": 300,
               "line": 4,
               "column": 164
             }
@@ -1128,12 +1128,12 @@
           "found": "{",
           "location": {
             "start": {
-              "offset": 99,
+              "offset": 101,
               "line": 75,
               "column": 99
             },
             "end": {
-              "offset": 100,
+              "offset": 102,
               "line": 75,
               "column": 100
             }
@@ -1151,12 +1151,12 @@
           "found": "=",
           "location": {
             "start": {
-              "offset": 100,
+              "offset": 102,
               "line": 75,
               "column": 100
             },
             "end": {
-              "offset": 101,
+              "offset": 103,
               "line": 75,
               "column": 101
             }
@@ -1174,12 +1174,12 @@
           "found": "}",
           "location": {
             "start": {
-              "offset": 111,
+              "offset": 113,
               "line": 75,
               "column": 111
             },
             "end": {
-              "offset": 112,
+              "offset": 114,
               "line": 75,
               "column": 112
             }
