@@ -5,7 +5,6 @@ const colors = require('colors');
 
 const folderPath = path.join(__dirname, "../files/");
 
-let parse = new Parser();
 let jsonParse = () => {
     let quiz = null;
     const jsonResultPath = path.join(__dirname, '../jsonResult');

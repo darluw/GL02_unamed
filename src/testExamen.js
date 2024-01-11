@@ -131,14 +131,21 @@ let testExamen = (jsonExamen, user) =>{
                     // affichage des questions et des réponses
                     afficherMatchings(lstQuestions, lstReponses);
                     // récupération des index des questions et des réponses
-                    let questionMatching = prompt("veuillez entrer l'index de votre question de gauche : ");
-                    while(questionMatching < 0 || questionMatching >= lstQuestions.length){
-                        questionMatching = prompt("veuillez entrer l'index de votre question de gauche : ");
-                    }
-                    let reponseMatching = prompt("veuilleez entrer l'index de votre question de droite : ");
-                    while(reponseMatching < 0 || reponseMatching >= lstReponses.length){
-                        reponseMatching = prompt("veuilleez entrer l'index de votre question de droite : ");
-                    }
+                    let questionMatching = prompt("Veuillez entrer l'index de votre question de gauche : ");
+questionMatching = parseInt(questionMatching);
+while (isNaN(questionMatching) || questionMatching < 0 || questionMatching >= lstQuestions.length) {
+    questionMatching = prompt("Veuillez entrer un index valide pour votre question de gauche : ");
+    questionMatching = parseInt(questionMatching);
+}
+
+                    
+                    let reponseMatching = prompt("Veuillez entrer l'index de votre question de droite : ");
+reponseMatching = parseInt(reponseMatching);
+while (isNaN(reponseMatching) || reponseMatching < 0 || reponseMatching >= lstReponses.length) {
+    reponseMatching = prompt("Veuillez entrer un index valide pour votre question de droite : ");
+    reponseMatching = parseInt(reponseMatching);
+}
+
                     // ajout de la question et de la réponse dans le dictionnaire
                     dictionnaireQuestionReponse[lstQuestions[questionMatching]] = lstReponses[reponseMatching];
                     // suppression de la question et de la réponse dans les listes
