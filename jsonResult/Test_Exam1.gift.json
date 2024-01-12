@@ -1,0 +1,1182 @@
+[
+  {
+    "location": {
+      "start": 1,
+      "end": 3,
+      "text": "::EM U4 p33 Review 4.6 for the first time::[html]I had never seen a glacier before I went to Norway<br>\n<b>I</b><br>\nWhen I was in Norway, {=I saw a glacier for#I had never seen – I saw ... for the first time} the first time."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "EM U4 p33 Review 4.6 for the first time",
+          "stem": {
+            "format": "html",
+            "text": "I had never seen a glacier before I went to Norway<br>\n<b>I</b><br>\nWhen I was in Norway,  _____ the first time."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "I saw a glacier for"
+              },
+              "feedback": {
+                "format": "html",
+                "text": "I had never seen – I saw ... for the first time"
+              }
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 5,
+      "end": 7,
+      "text": "::EM U4 p33 Review 4.6 for the first time::[html]I had never seen a glacier before I went to Norway<br>\n<b>I</b><br>\nWhen I was in Norway, {=I saw a glacier for#I had never seen – I saw ... for the first time} the first time."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "EM U4 p33 Review 4.6 for the first time",
+          "stem": {
+            "format": "html",
+            "text": "I had never seen a glacier before I went to Norway<br>\n<b>I</b><br>\nWhen I was in Norway,  _____ the first time."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "I saw a glacier for"
+              },
+              "feedback": {
+                "format": "html",
+                "text": "I had never seen – I saw ... for the first time"
+              }
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 9,
+      "end": 11,
+      "text": "::EM U4 p33 Review 4.6 for the first time::[html]I had never seen a glacier before I went to Norway<br>\n<b>I</b><br>\nWhen I was in Norway, {=I saw a glacier for#I had never seen – I saw ... for the first time} the first time."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "EM U4 p33 Review 4.6 for the first time",
+          "stem": {
+            "format": "html",
+            "text": "I had never seen a glacier before I went to Norway<br>\n<b>I</b><br>\nWhen I was in Norway,  _____ the first time."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "I saw a glacier for"
+              },
+              "feedback": {
+                "format": "html",
+                "text": "I had never seen – I saw ... for the first time"
+              }
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 13,
+      "end": 16,
+      "text": "::EM U42 Ultimate q4::When was Ulysses S. Grant born? {#\n   =1822:0\n   =%50%1822:2\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "Numerical",
+          "title": "EM U42 Ultimate q4",
+          "stem": {
+            "format": "moodle",
+            "text": "When was Ulysses S. Grant born?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "type": "range",
+                "number": 1822,
+                "range": 0
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": 50,
+              "text": {
+                "type": "range",
+                "number": 1822,
+                "range": 2
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 18,
+      "end": 22,
+      "text": "::EM U42 Ultimate q2::Deep Thought said \" {\n  =forty two#Correct according to The Hitchhiker's Guide to the Galaxy!\n  =42#Correct, as told to Loonquawl and Phouchg\n  =forty-two#Correct!\n}  is the Ultimate Answer to the Ultimate Question of Life, The Universe, and Everything.\""
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "EM U42 Ultimate q2",
+          "stem": {
+            "format": "moodle",
+            "text": "Deep Thought said \" _____ is the Ultimate Answer to the Ultimate Question of Life, The Universe, and Everything.\""
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "forty two"
+              },
+              "feedback": {
+                "format": "moodle",
+                "text": "Correct according to The Hitchhiker's Guide to the Galaxy!"
+              }
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "42"
+              },
+              "feedback": {
+                "format": "moodle",
+                "text": "Correct, as told to Loonquawl and Phouchg"
+              }
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "forty-two"
+              },
+              "feedback": {
+                "format": "moodle",
+                "text": "Correct!"
+              }
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 24,
+      "end": 24,
+      "text": "::U8 p84 Voc Linking words 5.5::I am trying to improve my French, {=as well as} learning Spanish."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U8 p84 Voc Linking words 5.5",
+          "stem": {
+            "format": "moodle",
+            "text": "I am trying to improve my French, _____ learning Spanish."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "as well as"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 26,
+      "end": 26,
+      "text": "::U6 p61 GR 1.2 Future forms::[html]She assures me that she {=will get='ll get} there on time. (<i>get</i>)"
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U6 p61 GR 1.2 Future forms",
+          "stem": {
+            "format": "html",
+            "text": "She assures me that she  _____ there on time. (<i>get</i>)"
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "will get"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "'ll get"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 28,
+      "end": 32,
+      "text": "::EM U42 Ultimate q1::What's the answer to this multiple-choice question? {\n  ~wrong answer#feedback comment on the wrong answer\n  ~another wrong answer#feedback comment on this wrong answer\n  =right answer#Very good!\n}"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "EM U42 Ultimate q1",
+          "stem": {
+            "format": "moodle",
+            "text": "What's the answer to this multiple-choice question?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "wrong answer"
+              },
+              "feedback": {
+                "format": "moodle",
+                "text": "feedback comment on the wrong answer"
+              }
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "another wrong answer"
+              },
+              "feedback": {
+                "format": "moodle",
+                "text": "feedback comment on this wrong answer"
+              }
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "right answer"
+              },
+              "feedback": {
+                "format": "moodle",
+                "text": "Very good!"
+              }
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 36,
+      "end": 36,
+      "text": "::EM U5 p34 Gra1.6::I eat {=hardly any~a few} meat — I prefer vegetables!"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "EM U5 p34 Gra1.6",
+          "stem": {
+            "format": "moodle",
+            "text": "I eat _____ meat — I prefer vegetables!"
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "hardly any"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "a few"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 38,
+      "end": 38,
+      "text": "::U1 p10 GR2.6 Present tenses & habits::Even when I have a bad headache I {=don't take =do not take} painkillers. (<i>not take</i>)"
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U1 p10 GR2.6 Present tenses & habits",
+          "stem": {
+            "format": "moodle",
+            "text": "Even when I have a bad headache I _____ painkillers. (<i>not take</i>)"
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "don't take"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "do not take"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 40,
+      "end": 42,
+      "text": "::U1 p7 Adverbs GR 1.2::[html]Take care when using this machinery. (<i>always</i>) {\n =Always take care when using this machinery.\n =Always take care when using this machinery}"
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U1 p7 Adverbs GR 1.2",
+          "stem": {
+            "format": "html",
+            "text": "Take care when using this machinery. (<i>always</i>) "
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "Always take care when using this machinery."
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "html",
+                "text": "Always take care when using this machinery"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 44,
+      "end": 44,
+      "text": "::U6 p61 GR 1.0 Future forms::Complete the sentences with the correct future form of the verb in brackets."
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": "U6 p61 GR 1.0 Future forms",
+          "stem": {
+            "format": "moodle",
+            "text": "Complete the sentences with the correct future form of the verb in brackets."
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 46,
+      "end": 54,
+      "text": "::U4 p47 Rev4 Past tenses, past perfect::Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Use between two and five words, including the word given.\nI lived in London until I got married last year. BEEN\nI {1:SA:=had been living} in London until I got married last year.\nIt took three days for us to walk there. WERE\nWe {1:SA:=were walking for} three days.\nI couldn't remember the way there, so I got a taxi. FORGOTTEN\nI {1:SA:=had forgotten how to} get there, so I got a taxi.\nIt was three years since I'd visited Peru. NOT\nI {1:SA:=hadn’t been=had not been=hadn't been} to Peru for three years."
+    },
+    "result": [
+      null,
+      [
+        {
+          "message": "Expected \"}\" but \":\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 266,
+              "line": 48,
+              "column": 5
+            },
+            "end": {
+              "offset": 267,
+              "line": 48,
+              "column": 6
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected \"}\" but \":\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 269,
+              "line": 48,
+              "column": 8
+            },
+            "end": {
+              "offset": 270,
+              "line": 48,
+              "column": 9
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected \"}\" but \"=\" found.",
+          "expected": [
+            {
+              "type": "literal",
+              "text": "}",
+              "ignoreCase": false
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 270,
+              "line": 48,
+              "column": 9
+            },
+            "end": {
+              "offset": 271,
+              "line": 48,
+              "column": 10
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 378,
+              "line": 50,
+              "column": 4
+            },
+            "end": {
+              "offset": 379,
+              "line": 50,
+              "column": 5
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 380,
+              "line": 50,
+              "column": 6
+            },
+            "end": {
+              "offset": 381,
+              "line": 50,
+              "column": 7
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 383,
+              "line": 50,
+              "column": 9
+            },
+            "end": {
+              "offset": 384,
+              "line": 50,
+              "column": 10
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 384,
+              "line": 50,
+              "column": 10
+            },
+            "end": {
+              "offset": 385,
+              "line": 50,
+              "column": 11
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 401,
+              "line": 50,
+              "column": 27
+            },
+            "end": {
+              "offset": 402,
+              "line": 50,
+              "column": 28
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 479,
+              "line": 52,
+              "column": 3
+            },
+            "end": {
+              "offset": 480,
+              "line": 52,
+              "column": 4
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 481,
+              "line": 52,
+              "column": 5
+            },
+            "end": {
+              "offset": 482,
+              "line": 52,
+              "column": 6
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 484,
+              "line": 52,
+              "column": 8
+            },
+            "end": {
+              "offset": 485,
+              "line": 52,
+              "column": 9
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 485,
+              "line": 52,
+              "column": 9
+            },
+            "end": {
+              "offset": 486,
+              "line": 52,
+              "column": 10
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 506,
+              "line": 52,
+              "column": 30
+            },
+            "end": {
+              "offset": 507,
+              "line": 52,
+              "column": 31
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"{\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "{",
+          "location": {
+            "start": {
+              "offset": 585,
+              "line": 54,
+              "column": 3
+            },
+            "end": {
+              "offset": 586,
+              "line": 54,
+              "column": 4
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 587,
+              "line": 54,
+              "column": 5
+            },
+            "end": {
+              "offset": 588,
+              "line": 54,
+              "column": 6
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \":\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": ":",
+          "location": {
+            "start": {
+              "offset": 590,
+              "line": 54,
+              "column": 8
+            },
+            "end": {
+              "offset": 591,
+              "line": 54,
+              "column": 9
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 591,
+              "line": 54,
+              "column": 9
+            },
+            "end": {
+              "offset": 592,
+              "line": 54,
+              "column": 10
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 603,
+              "line": 54,
+              "column": 21
+            },
+            "end": {
+              "offset": 604,
+              "line": 54,
+              "column": 22
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"=\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "=",
+          "location": {
+            "start": {
+              "offset": 616,
+              "line": 54,
+              "column": 34
+            },
+            "end": {
+              "offset": 617,
+              "line": 54,
+              "column": 35
+            }
+          },
+          "name": "SyntaxError"
+        },
+        {
+          "message": "Expected (blank lines separator) but \"}\" found.",
+          "expected": [
+            {
+              "type": "other",
+              "description": "(blank lines separator)"
+            }
+          ],
+          "found": "}",
+          "location": {
+            "start": {
+              "offset": 628,
+              "line": 54,
+              "column": 46
+            },
+            "end": {
+              "offset": 629,
+              "line": 54,
+              "column": 47
+            }
+          },
+          "name": "SyntaxError"
+        }
+      ]
+    ]
+  },
+  {
+    "location": {
+      "start": 56,
+      "end": 56,
+      "text": "::U8 p84 Voc Linking words 5.5::I am trying to improve my French, {=as well as} learning Spanish."
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U8 p84 Voc Linking words 5.5",
+          "stem": {
+            "format": "moodle",
+            "text": "I am trying to improve my French, _____ learning Spanish."
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "as well as"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 58,
+      "end": 60,
+      "text": "::U6 p61 5 Future forms::Look at the examples and answer the questions.\n- As soon as the film ends, we'll call a taxi.\n- We'll have dinner when she arrives."
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": "U6 p61 5 Future forms",
+          "stem": {
+            "format": "moodle",
+            "text": "Look at the examples and answer the questions. - As soon as the film ends, we'll call a taxi. - We'll have dinner when she arrives."
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 62,
+      "end": 65,
+      "text": "<b>1</b> What form of the verb follows a future time expression?\n<b>2</b> Is the clause with the time expression referring to the present or the future?\n<b>3</b> Is the time clause at the beginning or the end of the sentence?\n<b>4</b> What is the difference in meaning between as soon as and when?"
+    },
+    "result": [
+      [
+        {
+          "id": null,
+          "tags": null,
+          "type": "Description",
+          "title": null,
+          "stem": {
+            "format": "moodle",
+            "text": "<b>1</b> What form of the verb follows a future time expression? <b>2</b> Is the clause with the time expression referring to the present or the future? <b>3</b> Is the time clause at the beginning or the end of the sentence? <b>4</b> What is the difference in meaning between as soon as and when?"
+          },
+          "hasEmbeddedAnswers": false
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 67,
+      "end": 67,
+      "text": "::U1 p10 GR2.8 Present tenses & habits::It seemed very cold at first but now we {=are getting ='re getting} used to the weather. (<i>get</i>)"
+    },
+    "result": [
+      [
+        {
+          "type": "Short",
+          "title": "U1 p10 GR2.8 Present tenses & habits",
+          "stem": {
+            "format": "moodle",
+            "text": "It seemed very cold at first but now we _____ used to the weather. (<i>get</i>)"
+          },
+          "hasEmbeddedAnswers": true,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "are getting"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "'re getting"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  },
+  {
+    "location": {
+      "start": 69,
+      "end": 73,
+      "text": "::EM U5 p37 Reading 2.4::What does the phrase' got the hang of hang of it' in line 40 mean? {\n  ~Was preparing to do something\n  =Learnt how to do something\n  ~Got tired of doing something\n  ~Realised she liked doin something  }"
+    },
+    "result": [
+      [
+        {
+          "type": "MC",
+          "title": "EM U5 p37 Reading 2.4",
+          "stem": {
+            "format": "moodle",
+            "text": "What does the phrase' got the hang of hang of it' in line 40 mean?"
+          },
+          "hasEmbeddedAnswers": false,
+          "globalFeedback": null,
+          "choices": [
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "Was preparing to do something"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": true,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "Learnt how to do something"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "Got tired of doing something"
+              },
+              "feedback": null
+            },
+            {
+              "isCorrect": false,
+              "weight": null,
+              "text": {
+                "format": "moodle",
+                "text": "Realised she liked doin something"
+              },
+              "feedback": null
+            }
+          ],
+          "id": null,
+          "tags": null
+        }
+      ],
+      null
+    ]
+  }
+]

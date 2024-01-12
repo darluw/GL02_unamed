@@ -161,12 +161,25 @@ function entrerDansFichier(selectedFile) {
                 const existingQuestion = questions.find(q => q.title === selectedTitle);
 
                 if (existingQuestion) {
-                    console.log("\nQuestion déjà présente dans la sélection".red);
+                    console.log("\nQuestion déjà présente dans votre sélection".red);
                 } else {
-                    // Ajouter la question uniquement si elle n'est pas déjà dans le tableau
-                    questions.push({ title: selectedTitle, content: questionsInFile[selectedQuestion - 1].content });
-                    fin = 1;
-                    console.log(questions);
+                    // Afficher la question à ajouter
+                    console.log("\nVous êtes sur le point d'ajouter la question suivante :");
+                    console.log(`    Titre: ${selectedTitle}`);
+                    console.log(`    Contenu: ${questionsInFile[selectedQuestion - 1].content}`);
+
+                    // Demander confirmation à l'utilisateur
+                    const confirmation = prompt("Voulez-vous vraiment ajouter cette question ? (Oui/Non): ");
+                    if (confirmation.toLowerCase() === 'oui') {
+                        // Ajouter la question uniquement si l'utilisateur confirme
+                        questions.push({ title: selectedTitle, content: questionsInFile[selectedQuestion - 1].content });
+                        fin = 1;
+                        console.log("Question ajoutée avec succès !");
+                        console.log(questions);
+                    } else {
+                        console.log("Ajout de la question annulé.".yellow);
+                        fin = 1; // Terminer la boucle
+                    }
                 }
             } else {
                 console.log("Numéro de question invalide".red);
