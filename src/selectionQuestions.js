@@ -180,6 +180,11 @@ function entrerDansFichier(selectedFile) {
                         console.log("Ajout de la question annulé.".yellow);
                         fin = 1; // Terminer la boucle
                     }
+                    
+
+
+
+
                 }
             } else {
                 console.log("Numéro de question invalide".red);
@@ -188,6 +193,7 @@ function entrerDansFichier(selectedFile) {
     } catch (err) {
         console.error(("Erreur :", err).red);
     }
+    
 }
 
 
@@ -207,9 +213,19 @@ let supprimerQuestion = () => {
         console.log("Vous etes sortis de la fonction");
         return;
     } else {
-        index = parseInt(index);
-        questions.splice(index, 1);
-        console.log("Question supprimée".green);
+        const confirmation = prompt("Voulez-vous vraiment supprimer cette question ? (Oui/Non): ");
+        if (confirmation.toLowerCase() === 'oui') {
+            // supprimer la question uniquement si l'utilisateur confirme
+            index = parseInt(index);
+            questions.splice(index, 1);
+            console.log("Question supprimée".green);
+            fin = 1;
+            
+        } else {
+            console.log("Ajout de la question annulé.".yellow);
+            fin = 1; // Terminer la boucle
+        }
+        
     }
 }
 
